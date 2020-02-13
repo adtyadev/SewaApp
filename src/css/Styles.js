@@ -35,7 +35,8 @@ export default StyleSheet.create({
       },
       textCardItem:{
         width:250,
-        color:"gray"
+        color:"gray",
+       // paddingVertical:20
       }
       // scrollView: {
       //   backgroundColor: 'pink',

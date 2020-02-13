@@ -25,57 +25,66 @@ export default class Profile extends Component {
                 </Badge>
               </Body>
             </CardItem>
+
             <CardItem bordered button>
               <Icon active name="person" />
               <Text style={Styles.textCardItem}>Account Setting</Text>
               <Right >
                 <Icon name="arrow-forward" />
-
               </Right>
             </CardItem>
+
             <CardItem bordered button>
-              <Icon active name="chatbubbles" />
+              <Icon active name="finger-print" />
               <Text style={Styles.textCardItem}>Verification</Text>
               <Right >
                 <Icon name="arrow-forward" />
-
               </Right>
             </CardItem>
+
             <CardItem bordered button>
-              <Icon active name="logo-googleplus" />
+              <Icon active name="home" />
               <Text style={Styles.textCardItem}>Address</Text>
               <Right >
                 <Icon name="arrow-forward" />
-
               </Right>
             </CardItem>
+
             <CardItem bordered button>
               <Icon active name="chatbubbles" />
               <Text style={Styles.textCardItem}>Chat</Text>
               <Right >
                 <Icon name="arrow-forward" />
-
               </Right>
             </CardItem>
+
             <CardItem bordered button>
-              <Icon active name="logo-googleplus" />
+              <Icon active name="call" />
               <Text style={Styles.textCardItem}>Complain</Text>
               <Right >
                 <Icon name="arrow-forward" />
-
               </Right>
             </CardItem>
+
             <CardItem bordered button >
-              <Icon active name="logo-googleplus" />
+              <Icon active name="infinite" />
               <Text style={Styles.textCardItem}>Input And Suggestion</Text>
               <Right >
                 <Icon name="arrow-forward" />
-
               </Right>
             </CardItem>
+
             <CardItem bordered button>
-              <Icon active name="logo-googleplus" />
+              <Icon active name="globe" />
               <Text style={Styles.textCardItem}>Change Language</Text>
+              <Right >
+                <Icon name="arrow-forward" />
+              </Right>
+            </CardItem>
+
+            <CardItem bordered button>
+              <Icon active name="undo"/>
+              <Text style={Styles.textCardItem}>Sign Out</Text>
               <Right >
                 <Icon name="arrow-forward" />
               </Right>
