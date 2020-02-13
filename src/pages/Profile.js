@@ -1,17 +1,45 @@
 import React, { Component } from 'react';
-import { Container, Body, Button, Badge, Header, Content, Card, CardItem, Text, Icon, Right, Switch, Left, ListItem, StyleProvider, List } from 'native-base';
+import { Container, Body, Button, Badge, Header, Content, Card, CardItem, Text, Fab, Footer, FooterTab, Icon, Right, Switch, Left, ListItem, StyleProvider, List } from 'native-base';
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 export default class Profile extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      active: false
+    };
+  }
   render() {
     return (
       <Container >
+        {/* <View style={{ flex: 1 }}>
+          <Fab
+            active={this.state.active}
+            direction="up"
+            containerStyle={{ }}
+            style={{ backgroundColor: '#5067FF' }}
+            position="bottomRight"
+            onPress={() => this.setState({ active: !this.state.active })}>
+            <Icon name="share" />
+            <Button style={{ backgroundColor: '#34A34F' }}>
+              <Icon name="logo-whatsapp" />
+            </Button>
+            <Button style={{ backgroundColor: '#3B5998' }}>
+              <Icon name="logo-facebook" />
+            </Button>
+            <Button disabled style={{ backgroundColor: '#DD5144' }}>
+              <Icon name="mail" />
+            </Button>
+          </Fab>
+        </View> */}
         <Content >
           <View style={Styles.backgroundAbsolute}></View>
+
           <Card style={Styles.card} >
             <View style={{ flex: 1, flexDirection: 'column' }}>
+
               <View style={{ width: 360, height: 40, alignItems: "center", justifyContent: "center", flexDirection: 'row', }}>
                 <Icon name="star" style={{ fontSize: 20, color: "#FF9100", lineHeight: 25 }} />
                 <Icon name="star" style={{ fontSize: 20, color: "#FF9100", lineHeight: 25 }} />
@@ -117,9 +145,44 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
+            <CardItem bordered button>
+              <Icon active name="undo" />
+              <Text style={Styles.textCardItem}>Sign Out</Text>
+              <Right >
+                <Icon name="arrow-forward" />
+              </Right>
+            </CardItem>
+
+            <CardItem bordered button>
+              <Icon active name="undo" />
+              <Text style={Styles.textCardItem}>Sign Out</Text>
+              <Right >
+                <Icon name="arrow-forward" />
+              </Right>
+            </CardItem>
+
           </Card>
 
         </Content>
+        <Fab
+          active={this.state.active}
+          direction="up"
+          containerStyle={{}}
+          style={{ backgroundColor: '#5067FF' }}
+          position="bottomRight"
+          onPress={() => this.setState({ active: !this.state.active })}>
+          <Icon name="share" />
+          <Button style={{ backgroundColor: '#34A34F' }}>
+            <Icon name="logo-whatsapp" />
+          </Button>
+          <Button disabled style={{ backgroundColor: 'gray' }}>
+            <Icon name="mail" />
+          </Button>
+          <Button style={{ backgroundColor: '#3B5998' }}>
+            <Icon name="logo-facebook" />
+          </Button>
+
+        </Fab>
       </Container>
     );
   }
