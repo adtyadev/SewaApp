@@ -14,19 +14,28 @@ export default StyleSheet.create({
 
         // marginTop: Constants.statusBarHeight,
       },
+      backgroundAbsolute:{
+        height: 210,
+        width:((Dimensions.get('window').height)),
+        backgroundColor:"black",
+        position:'absolute'
+      },
       card:{
-        marginTop:20,
-        marginRight:20,
-        marginLeft:20,
+        marginTop:180,
+        marginRight:15,
+        marginLeft:15,
         marginBottom:20,
-        borderRadius:10,
-        borderStyle:'solid',
-        borderBottomColor:'red',
+        borderRadius:5,
+        padding:10,
       },
       cardItem:{
-        borderStyle:'solid',
-        borderBottomColor:'red',
-        backgroundColor:"#40C4FF"
+        flex:1,
+        flexDirection:'row',
+        backgroundColor:"yellow"
+      },
+      textCardItem:{
+        width:250,
+        color:"gray"
       }
       // scrollView: {
       //   backgroundColor: 'pink',
