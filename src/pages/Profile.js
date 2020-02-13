@@ -11,8 +11,37 @@ export default class Profile extends Component {
         <Content >
           <View style={Styles.backgroundAbsolute}></View>
           <Card style={Styles.card} >
-            <CardItem header bordered>
-              <Body>
+            <View style={{ flex: 1, flexDirection: 'column' }}>
+              <View style={{ width: 360, height: 40, alignItems: "center", justifyContent: "center", flexDirection: 'row', }}>
+                <Icon name="star" style={{ fontSize: 20, color: "#FF9100", lineHeight: 25 }} />
+                <Icon name="star" style={{ fontSize: 20, color: "#FF9100", lineHeight: 25 }} />
+                <Icon name="star" style={{ fontSize: 20, color: "#FF9100", lineHeight: 25 }} />
+                <Icon name="star-half" style={{ fontSize: 20, color: "#FF9100", lineHeight: 25 }} />
+              </View>
+              <View style={{ width: 360, height: 50, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
+                <Text style={{ fontSize: 22, fontWeight: "bold", color: "#00B0FF" }}> Admin </Text>
+                <Text> Referral ID : 085799599692 </Text>
+              </View>
+              <View style={{ width: 360, height: 90, flexDirection: 'row', alignItems: "center", justifyContent: "space-around" }}>
+                <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
+                  <Icon name="star" style={{ fontSize: 20, color: "black", lineHeight: 25 }} />
+                  <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
+                  <Text > Points </Text>
+                </View>
+                <View style={{ width: 70, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
+                  <Icon active name="star" />
+                  <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
+                  <Text> Points </Text>
+                </View>
+                <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
+                  <Icon active name="star" style={{ fontSize: 20, color: "black", lineHeight: 25 }} />
+                  <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> Rp 0 </Text>
+                  <Text> Points </Text>
+                </View>
+              </View>
+
+            </View>
+            {/* <Body style={{backgroundColor:"red"}}>
                 <Text>
                   NativeBase is a free and open source framework that enable
                   developers to build
@@ -23,9 +52,7 @@ export default class Profile extends Component {
                 <Badge>
                   <Text>2</Text>
                 </Badge>
-              </Body>
-            </CardItem>
-
+              </Body> */}
             <CardItem bordered button>
               <Icon active name="person" />
               <Text style={Styles.textCardItem}>Account Setting</Text>
@@ -83,13 +110,13 @@ export default class Profile extends Component {
             </CardItem>
 
             <CardItem bordered button>
-              <Icon active name="undo"/>
+              <Icon active name="undo" />
               <Text style={Styles.textCardItem}>Sign Out</Text>
               <Right >
                 <Icon name="arrow-forward" />
               </Right>
             </CardItem>
-            
+
           </Card>
 
         </Content>

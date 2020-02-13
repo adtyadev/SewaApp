@@ -17,7 +17,7 @@ export default StyleSheet.create({
       backgroundAbsolute:{
         height: 210,
         width:((Dimensions.get('window').height)),
-        backgroundColor:"black",
+        backgroundColor:"#00B0FF",
         position:'absolute'
       },
       card:{
