@@ -12,6 +12,8 @@ import {
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
+import TransactionEmpty from '../components/TransactionEmpty';
+import TransactionCanceled from '../components/TransactionCanceled';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 export default class Transaction extends Component {
@@ -27,7 +29,7 @@ export default class Transaction extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title>Header</Title>
+                        <Title>History Transaction</Title>
                     </Body>
                     <Right>
                         <Button transparent>
@@ -36,14 +38,16 @@ export default class Transaction extends Component {
                     </Right>
                 </Header>
 
-                <Tabs tabBarUnderlineStyle={{ backgroundColor: '#00B0FF' }} renderTabBar={() => <ScrollableTab />} >
+                <Tabs tabBarUnderlineStyle={{ backgroundColor: '#00B0FF',height:2 }} renderTabBar={() => <ScrollableTab />} >
                     <Tab
                         tabStyle={{ backgroundColor: '#fff' }}
                         textStyle={{ color: 'black' }}
                         activeTabStyle={{ backgroundColor: '#fff' }}
-
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
-                        heading="Tab1">
+                        heading="Unpaid">
+
+                        {/* <TransactionEmpty/> */}
+                        <TransactionCanceled/>
 
                     </Tab>
                     <Tab
@@ -52,7 +56,8 @@ export default class Transaction extends Component {
                         activeTabStyle={{ backgroundColor: '#fff' }}
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
-                        heading="Tab2">
+                        heading="Paid">
+                        <TransactionEmpty/>
 
                     </Tab>
                     <Tab
@@ -61,7 +66,8 @@ export default class Transaction extends Component {
                         activeTabStyle={{ backgroundColor: '#fff' }}
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
-                        heading="Tab3">
+                        heading="Accepted">
+                        <TransactionEmpty/>
 
                     </Tab>
                     <Tab
@@ -70,7 +76,8 @@ export default class Transaction extends Component {
                         activeTabStyle={{ backgroundColor: '#fff' }}
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
-                        heading="Tab4">
+                        heading="Ongoing">
+                        <TransactionEmpty/>
 
                     </Tab>
                     <Tab
@@ -79,10 +86,29 @@ export default class Transaction extends Component {
                         activeTabStyle={{ backgroundColor: '#fff' }}
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
-                        heading="Tab5">
+                        heading="Completed">
+                        <TransactionEmpty/>
 
                     </Tab>
-                    
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Canceled">
+                        <TransactionCanceled/>
+
+                    </Tab>
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Tab7">
+
+                    </Tab>
                 </Tabs>
             </Container>
         )
