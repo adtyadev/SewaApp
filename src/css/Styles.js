@@ -37,18 +37,91 @@ export default StyleSheet.create({
         width:250,
         color:"gray",
        // paddingVertical:20
-      }
-      // scrollView: {
-      //   backgroundColor: 'pink',
-      //   marginHorizontal: 0,
-      // },
-      // viewFlex3: {
-      //   height: 330,
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-    
-      // },
-    
+      },
+      cardListCancelCard:{
+        padding: 10,
+        marginRight: 10,
+        marginLeft: 10,
+        marginTop: 20,
+        marginBottom: 10
+    },
+    cardItemSmall:{
+      backgroundColor: "white",
+      paddingTop: 5,
+      paddingBottom: 5,
+      paddingLeft: 10,
+      paddingRight: 10
+  },
+  cardItemMedium:{
+    backgroundColor: "white",
+    flex: 1,
+    flexDirection: "row",
+    paddingBottom: 20,
+    paddingTop: 20,
+    paddingLeft: 10,
+    paddingRight: 10
+},
+cardItemLarge:{
+  backgroundColor: "white",
+  flex: 1,
+  flexDirection: "row",
+  paddingBottom: 50,
+  paddingTop: 50,
+  paddingLeft: 10,
+  paddingRight: 10
+},
+fontBold12BlackPd10:{
+  fontSize: 12,
+  color: "black",
+  fontWeight: "bold",
+  paddingLeft: 10
+},
+fontBold14Black:{
+  fontSize: 14,
+  fontWeight: "bold"
+},
+  fontBold12Red:{
+    fontSize: 12,
+    color: "#DD2C00",
+    fontWeight: "bold"
+},
+fontBold15Black:{
+  fontSize: 15,
+  color: "black",
+  fontWeight: "bold"
+},
+fontBold15Blue:{
+  fontSize: 15,
+  color: "blue",
+  fontWeight: "bold"
+},
+      imageListCancelCard:{
+        height: 60, 
+        width: 60, 
+        backgroundColor: "white" 
+      },
+      headerAccordionSmall:{
+        backgroundColor: "#b7daf8",
+        backgroundColor: "white",
+        paddingTop: 5,
+        paddingBottom: 5,
+        paddingLeft: 18,
+        paddingRight: 10,
+        width: 110,
+        color: "gray"
+    },
+    contentAccordionSmall:{
+      backgroundColor: "white",
+      paddingTop: 5,
+      paddingBottom: 5,
+      paddingLeft: 18,
+      paddingRight: 10,
+  },
+      flex1Column:{
+        backgroundColor: "white",
+        flex: 1,
+        flexDirection: "column",
+    }
       // logoStyle: {
       //   backgroundColor: "red"
       // },

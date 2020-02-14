@@ -46,8 +46,8 @@ export default class Transaction extends Component {
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Unpaid">
 
-                        {/* <TransactionEmpty/> */}
-                        <TransactionCanceled/>
+                        <TransactionEmpty/>
+                        
 
                     </Tab>
                     <Tab
