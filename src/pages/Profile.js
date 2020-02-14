@@ -161,6 +161,22 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
+            <CardItem bordered button>
+              <Icon active name="undo" />
+              <Text style={Styles.textCardItem}>Sign Out</Text>
+              <Right >
+                <Icon name="arrow-forward" />
+              </Right>
+            </CardItem>
+
+            <CardItem bordered button>
+              <Icon active name="undo" />
+              <Text style={Styles.textCardItem}>Sign Out</Text>
+              <Right >
+                <Icon name="arrow-forward" />
+              </Right>
+            </CardItem>
+
           </Card>
 
         </Content>

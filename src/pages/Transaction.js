@@ -1,0 +1,90 @@
+import React, { Component } from 'react';
+import {
+    Container,
+    Button,
+    Icon,
+    Title,
+    Header,
+    Left, Right, Body,
+    Text, StatusBar,
+    Tab, Tabs, ScrollableTab,
+    StyleProvider, List
+} from 'native-base';
+import { View, Dimensions, TouchableOpacity } from 'react-native';
+import Styles from '../css/Styles';
+// import getTheme from '../native-base-theme/components';  
+// import styleTheme from '../native-base-theme/variables/platform.js';
+export default class Transaction extends Component {
+
+    render() {
+        return (
+            <Container style={{ backgroundColor: "black" }}>
+                {/* <Content> digunakan untuk scrollview pada page */}
+                <Header style={{ backgroundColor: "#00B0FF", marginTop: 29 }}>
+                    <Left>
+                        <Button transparent>
+                            <Icon name='arrow-back' />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Title>Header</Title>
+                    </Body>
+                    <Right>
+                        <Button transparent>
+                            <Icon name='menu' />
+                        </Button>
+                    </Right>
+                </Header>
+
+                <Tabs tabBarUnderlineStyle={{ backgroundColor: '#00B0FF' }} renderTabBar={() => <ScrollableTab />} >
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Tab1">
+
+                    </Tab>
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Tab2">
+
+                    </Tab>
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Tab3">
+
+                    </Tab>
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Tab4">
+
+                    </Tab>
+                    <Tab
+                        tabStyle={{ backgroundColor: '#fff' }}
+                        textStyle={{ color: 'black' }}
+                        activeTabStyle={{ backgroundColor: '#fff' }}
+
+                        activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
+                        heading="Tab5">
+
+                    </Tab>
+                    
+                </Tabs>
+            </Container>
+        )
+    }
+}
