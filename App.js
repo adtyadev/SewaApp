@@ -32,8 +32,8 @@ export default class App extends Component {
     return (
       <Container>
         {/* <Text>Open up App.js to start working on your app!</Text> */}
-        {/* <Profile/> */}
-        <Transaction/>
+        <Profile/>
+        {/* <Transaction/> */}
       </Container>
     );
   }
