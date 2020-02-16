@@ -104,6 +104,11 @@ export default StyleSheet.create({
     color: "blue",
     fontWeight: "bold"
   },
+  font7Gray:{
+    fontSize:7,
+    color:"gray",
+    textTransform: "capitalize"
+  },
   imageListCancelCard: {
     height: 60,
     width: 60,
@@ -144,6 +149,11 @@ export default StyleSheet.create({
     color: "#FF9100",
     lineHeight: 25
   },
+  iconFooter:{
+    color:"gray",
+    fontSize:20,
+    lineHeight:30
+  }
 
   // logoStyle: {
   //   backgroundColor: "red"

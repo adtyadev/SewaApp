@@ -8,6 +8,7 @@ import Styles from './src/css/Styles';
 import Profile from './src/pages/Profile';
 import Transaction from './src/pages/Transaction';
 import Inbox from './src/pages/Inbox';
+import Home from './src/pages/Home';
 
 import SplashScreen from './src/pages/SplashScreen';
 export default class App extends Component {
@@ -58,7 +59,8 @@ export default class App extends Component {
         {/* <Text>Open up App.js to start working on your app!</Text> */}
         {/* <Profile/> */}
         {/* <Transaction/> */}
-        <Inbox />
+        {/* <Inbox /> */}
+        <Home/>
       </Container>
     );
   }
