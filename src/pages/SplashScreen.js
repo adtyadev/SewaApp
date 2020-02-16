@@ -14,8 +14,8 @@ export default class SplashScreen extends Component {
         return (
             <Container style={{}}>
                 {/* <Content> digunakan untuk scrollview pada page */}
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center"}}>
-                <Image source={require('../img/cek.gif')} />
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor:"white"}}>
+                <Image style={Styles.imageSplashScreen} source={require('../img/SplashScreen.gif')} />
                 </View>
             </Container>
         )

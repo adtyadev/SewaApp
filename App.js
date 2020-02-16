@@ -23,7 +23,7 @@ export default class App extends Component {
     return new Promise((resolve) =>
       setTimeout(
         () => { resolve('result') },
-        2000
+        5000
       )
     );
   }

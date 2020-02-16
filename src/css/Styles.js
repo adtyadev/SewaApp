@@ -109,8 +109,8 @@ export default StyleSheet.create({
     width: 60,
   },
   imageSplashScreen: {
-    height: (Dimensions.get('window').height),
-    width: (Dimensions.get('window').width),
+    height: (Dimensions.get('window').height)-100,
+    width: (Dimensions.get('window').width)-100,
   },
   headerAccordionSmall: {
     backgroundColor: "#b7daf8",
