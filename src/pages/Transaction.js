@@ -6,11 +6,11 @@ import {
     Title,
     Header,
     Left, Right, Body,
-    Text, StatusBar,
+    Text,
     Tab, Tabs, ScrollableTab,
     StyleProvider, List
 } from 'native-base';
-import { View, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Dimensions, TouchableOpacity,StatusBar } from 'react-native';
 import Styles from '../css/Styles';
 import TransactionEmpty from '../components/TransactionEmpty';
 import TransactionCanceled from '../components/TransactionCanceled';
@@ -20,9 +20,9 @@ export default class Transaction extends Component {
 
     render() {
         return (
-            <Container style={{ backgroundColor: "black" }}>
+            <Container style={{ backgroundColor: "#00B0FF" }}>
                 {/* <Content> digunakan untuk scrollview pada page */}
-                <Header style={{ backgroundColor: "#00B0FF", marginTop: 29 }}>
+                <Header style={{ backgroundColor: "#00B0FF", marginTop: StatusBar.currentHeight }}>
                     <Left>
                         <Button transparent>
                             <Icon name='arrow-back' />

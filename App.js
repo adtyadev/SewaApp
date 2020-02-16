@@ -7,6 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Styles from './src/css/Styles';
 import Profile from './src/pages/Profile';
 import Transaction from './src/pages/Transaction';
+import Inbox from './src/pages/Inbox';
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -32,8 +33,9 @@ export default class App extends Component {
     return (
       <Container>
         {/* <Text>Open up App.js to start working on your app!</Text> */}
-        <Profile/>
+        {/* <Profile/> */}
         {/* <Transaction/> */}
+        <Inbox/>
       </Container>
     );
   }
