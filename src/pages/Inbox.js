@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import {
     Container, Header, Left, Body, Right, Button, Icon, Title, Text,
-    Tab, Tabs, TabHeading,
+    Tab, Tabs, TabHeading, Content,
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 import Styles from '../css/Styles';
+import NotificationCards from '../components/NotificationCard';
+import PromoEmpty from '../components/PromoEmpty';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 export default class Inbox extends Component {
@@ -33,7 +35,14 @@ export default class Inbox extends Component {
                         activeTabStyle={{ backgroundColor: '#fff' }}
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Notification"
-                        >
+                    >
+                        <Content>
+                            <NotificationCards />
+                            <NotificationCards />
+                            <NotificationCards />
+                            <NotificationCards />
+                            <NotificationCards />
+                        </Content>
 
                     </Tab>
                     <Tab
@@ -42,6 +51,8 @@ export default class Inbox extends Component {
                         activeTabStyle={{ backgroundColor: '#fff' }}
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Promo">
+
+                        <PromoEmpty />
 
                     </Tab>
                 </Tabs>

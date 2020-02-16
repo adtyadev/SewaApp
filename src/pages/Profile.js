@@ -37,7 +37,7 @@ export default class Profile extends Component {
         <Content >
           <View style={Styles.backgroundAbsolute}></View>
 
-          <Card style={Styles.card} >
+          <Card style={Styles.cardProfile} >
             <View style={{ flex: 1, flexDirection: 'column' }}>
 
               <View style={{ alignItems: "center", justifyContent: "center", flexDirection: 'row' }}>
@@ -52,7 +52,7 @@ export default class Profile extends Component {
               </View>
               <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-around" }}>
                 <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                  <Icon name="star" style={Styles.starSmall} style={{ color: "black"}} />
+                  <Icon name="star" style={Styles.starSmall} style={{ color: "black" }} />
                   <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
                   <Text > Points </Text>
                 </View>
@@ -62,7 +62,7 @@ export default class Profile extends Component {
                   <Text> Points </Text>
                 </View>
                 <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                  <Icon active name="star" style={Styles.starSmall} style={{ color: "black"}}/>
+                  <Icon active name="star" style={Styles.starSmall} style={{ color: "black" }} />
                   <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> Rp 0 </Text>
                   <Text> Points </Text>
                 </View>

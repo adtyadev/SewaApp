@@ -10,7 +10,7 @@ import {
     Tab, Tabs, ScrollableTab,
     StyleProvider, List
 } from 'native-base';
-import { View, Dimensions, TouchableOpacity,StatusBar } from 'react-native';
+import { View, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 import Styles from '../css/Styles';
 import TransactionEmpty from '../components/TransactionEmpty';
 import TransactionCanceled from '../components/TransactionCanceled';
@@ -38,7 +38,7 @@ export default class Transaction extends Component {
                     </Right>
                 </Header>
 
-                <Tabs tabBarUnderlineStyle={{ backgroundColor: '#00B0FF',height:2 }} renderTabBar={() => <ScrollableTab />} >
+                <Tabs tabBarUnderlineStyle={{ backgroundColor: '#00B0FF', height: 2 }} renderTabBar={() => <ScrollableTab />} >
                     <Tab
                         tabStyle={{ backgroundColor: '#fff' }}
                         textStyle={{ color: 'black' }}
@@ -46,8 +46,8 @@ export default class Transaction extends Component {
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Unpaid">
 
-                        <TransactionEmpty/>
-                        
+                        <TransactionEmpty />
+
 
                     </Tab>
                     <Tab
@@ -57,7 +57,7 @@ export default class Transaction extends Component {
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Paid">
-                        <TransactionEmpty/>
+                        <TransactionEmpty />
 
                     </Tab>
                     <Tab
@@ -67,7 +67,7 @@ export default class Transaction extends Component {
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Accepted">
-                        <TransactionEmpty/>
+                        <TransactionEmpty />
 
                     </Tab>
                     <Tab
@@ -77,7 +77,7 @@ export default class Transaction extends Component {
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Ongoing">
-                        <TransactionEmpty/>
+                        <TransactionEmpty />
 
                     </Tab>
                     <Tab
@@ -87,7 +87,7 @@ export default class Transaction extends Component {
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Completed">
-                        <TransactionEmpty/>
+                        <TransactionEmpty />
 
                     </Tab>
                     <Tab
@@ -97,7 +97,7 @@ export default class Transaction extends Component {
 
                         activeTextStyle={{ color: 'black', fontWeight: 'normal' }}
                         heading="Canceled">
-                        <TransactionCanceled/>
+                        <TransactionCanceled />
 
                     </Tab>
                     <Tab

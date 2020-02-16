@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
- import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { AppLoading } from 'expo';
 import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
@@ -35,7 +35,7 @@ export default class App extends Component {
         {/* <Text>Open up App.js to start working on your app!</Text> */}
         {/* <Profile/> */}
         {/* <Transaction/> */}
-        <Inbox/>
+        <Inbox />
       </Container>
     );
   }

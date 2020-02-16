@@ -20,7 +20,16 @@ export default StyleSheet.create({
     backgroundColor: "#00B0FF",
     position: 'absolute'
   },
-  card: {
+  cardNotification: {
+    marginRight: 15,
+    marginLeft: 15,
+    marginTop: 10,
+    marginBottom: 5,
+    borderRadius: 5,
+    padding: 10,
+
+  },
+  cardProfile: {
     marginTop: 180,
     marginRight: 15,
     marginLeft: 15,
@@ -121,6 +130,11 @@ export default StyleSheet.create({
     backgroundColor: "white",
     flex: 1,
     flexDirection: "column",
+  },
+  flex1Row: {
+    backgroundColor: "white",
+    flex: 1,
+    flexDirection: "row",
   },
   starSmall: {
     fontSize: 20,

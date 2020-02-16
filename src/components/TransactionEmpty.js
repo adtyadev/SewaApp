@@ -20,7 +20,7 @@ export default class TransactionEmpty extends Component {
           source={require('../img/list-empty.png')}
         />
         <Text style={{fontSize:18}}>Your Transaction List is Empty</Text>
-        <Text style={{fontSize:13, color:"gray"}}>Begin renting items and get easier to monitor various deals here</Text>
+        <Text style={{fontSize:13, color:"gray", textAlign:"center"}}>Begin renting items and get easier to monitor various deals here</Text>
                 </View>
             </Container>
         )
