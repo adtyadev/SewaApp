@@ -18,7 +18,7 @@ export default class NotificationCard extends Component {
                 <Card style={Styles.cardNotification}>
                     <CardItem>
                         <View style={Styles.flex1Row}>
-                            <Image source={require('../img/list-empty.png')} style={Styles.imageListCancelCard} />
+                            <Image source={require('../img/times-up.png')} style={Styles.imageListCancelCard} />
                             <View style={Styles.flex1Column}>
                                 <Text style={{ paddingLeft: 10 }}> Waktu Pembayaran Anda Telah Berakhir </Text>
                                 <Text note style={{ paddingLeft: 10 }}> Waktu Pembayaran Anda Telah Berakhir </Text>

@@ -107,7 +107,10 @@ export default StyleSheet.create({
   imageListCancelCard: {
     height: 60,
     width: 60,
-    backgroundColor: "white"
+  },
+  imageSplashScreen: {
+    height: (Dimensions.get('window').height),
+    width: (Dimensions.get('window').width),
   },
   headerAccordionSmall: {
     backgroundColor: "#b7daf8",

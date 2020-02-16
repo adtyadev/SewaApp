@@ -8,12 +8,24 @@ import Styles from './src/css/Styles';
 import Profile from './src/pages/Profile';
 import Transaction from './src/pages/Transaction';
 import Inbox from './src/pages/Inbox';
+
+import SplashScreen from './src/pages/SplashScreen';
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isReady: false,
+      isLoading: true
     };
+  }
+
+  performTimeConsumingTask = async () => {
+    return new Promise((resolve) =>
+      setTimeout(
+        () => { resolve('result') },
+        2000
+      )
+    );
   }
 
   async componentDidMount() {
@@ -23,11 +35,22 @@ export default class App extends Component {
       ...Ionicons.font,
     });
     this.setState({ isReady: true });
+
+    const data = await this.performTimeConsumingTask();
+    if (data !== null) {
+      this.setState({ isLoading: false });
+    }
+
   }
+
 
   render() {
     if (!this.state.isReady) {
       return <AppLoading />;
+    }
+
+    if (this.state.isLoading) {
+      return <SplashScreen />;
     }
 
     return (
