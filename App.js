@@ -6,15 +6,12 @@ import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import Styles from './src/css/Styles';
-import Profile from './src/pages/Profile';
-import Transaction from './src/pages/Transaction';
-import Inbox from './src/pages/Inbox';
-import Home from './src/pages/Home';
 import Navigation from './src/pages/Navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from './src/pages/SplashScreen';
-
+import { enableScreens } from 'react-native-screens';
+enableScreens();
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +25,7 @@ export default class App extends Component {
     return new Promise((resolve) =>
       setTimeout(
         () => { resolve('result') },
-        5000
+        3000
       )
     );
   }
@@ -59,15 +56,15 @@ export default class App extends Component {
     }
 
     return (
-     
-        <Container>
-          {/* <Text>Open up App.js to start working on your app!</Text> */}
-          {/* <Profile/> */}
-          {/* <Transaction/> */}
-          {/* <Inbox /> */}
-          {/* <Home/> */}
-          <Navigation/>
-        </Container>
+
+      <Container>
+        {/* <Text>Open up App.js to start working on your app!</Text> */}
+        {/* <Profile/> */}
+        {/* <Transaction/> */}
+        {/* <Inbox /> */}
+        {/* <Home/> */}
+        <Navigation />
+      </Container>
 
     );
   }

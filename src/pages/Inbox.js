@@ -84,7 +84,8 @@ export default class Inbox extends Component {
                             <Icon name="document" style={Styles.iconFooter} />
                             <Text style={Styles.font7Gray}>Transaction</Text>
                         </Button>
-                        <Button vertical>
+                        <Button vertical 
+                        onPress={() => this.props.navigation.navigate('Chart')}>
                             <Icon name="cart" style={Styles.iconFooter} />
                             <Text style={Styles.font7Gray}>Cart</Text>
                         </Button>

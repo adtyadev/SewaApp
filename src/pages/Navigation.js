@@ -11,6 +11,7 @@ import Profile from './Profile';
 import Transaction from './Transaction';
 import Inbox from './Inbox';
 import Home from './Home';
+import Chart from './Chart';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 import { NavigationContainer } from '@react-navigation/native';
@@ -59,6 +60,7 @@ export default class Navigation extends Component {
                         <Stack.Screen name="Inbox" component={Inbox} options={{ title: 'Inbox' }} />
                         <Stack.Screen name="Transaction" component={Transaction} options={{title:'Transaction'}}/>
                         <Stack.Screen name="Profile" component={Profile} options={{title:'Profile'}}/>
+                        <Stack.Screen name="Chart" component={Chart} options={{title:'Chart'}}/>
                     </Stack.Navigator>
                 </NavigationContainer>
             </Container>

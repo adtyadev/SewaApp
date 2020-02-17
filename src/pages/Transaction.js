@@ -138,7 +138,8 @@ export default class Transaction extends Component {
                             <Icon active name="document" style={Styles.iconFooter} />
                             <Text style={Styles.font7Gray}>Transaction</Text>
                         </Button>
-                        <Button vertical>
+                        <Button vertical
+                        onPress={() => this.props.navigation.navigate('Chart')}>
                             <Icon name="cart" style={Styles.iconFooter} />
                             <Text style={Styles.font7Gray}>Cart</Text>
                         </Button>

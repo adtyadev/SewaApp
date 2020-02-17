@@ -113,6 +113,11 @@ export default StyleSheet.create({
     height: 60,
     width: 60,
   },
+  imageChartEmpty: {
+    height: 250,
+    width: 250,
+    marginVertical:50,
+  },
   imageSplashScreen: {
     height: (Dimensions.get('window').height)-100,
     width: (Dimensions.get('window').width)-100,
@@ -153,7 +158,7 @@ export default StyleSheet.create({
     color:"gray",
     fontSize:20,
     lineHeight:30
-  }
+  },
 
   // logoStyle: {
   //   backgroundColor: "red"
@@ -176,19 +181,16 @@ export default StyleSheet.create({
   //   paddingHorizontal: 15
   // },
 
-  // buttonStyle: {
-  //   marginTop: 50,
-  //   height: 60,
-  //   width: 350,
-  //   fontWeight: '500',
-  //   borderColor: '#263238',
-  //   borderWidth: 1,
-  //   backgroundColor: '#424242',
-  //   textAlign: 'center',
-  //   borderRadius: 50,
-  //   fontSize: 20,
-  //   paddingHorizontal: 15
-  // },
+  buttonStyle: {
+    fontWeight: 'bold',
+    backgroundColor: '#00B0FF',
+    textAlign: 'center',
+    marginBottom:10,
+    borderRadius: 50,
+    fontSize: 15,
+    paddingVertical:15,
+    paddingHorizontal:25
+  },
   // textButtonStyle: {
   //   fontSize: 25,
   //   color: 'white',
