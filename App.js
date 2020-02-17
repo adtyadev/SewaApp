@@ -1,5 +1,6 @@
+import 'react-native-gesture-handler';
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import { AppLoading } from 'expo';
 import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
@@ -9,8 +10,47 @@ import Profile from './src/pages/Profile';
 import Transaction from './src/pages/Transaction';
 import Inbox from './src/pages/Inbox';
 import Home from './src/pages/Home';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from './src/pages/SplashScreen';
+
+function HomeScreen({ navigation }) {
+  return (
+    // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    //   <Text>Home Screen</Text>
+    // </View>
+    // <Home />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Screen"
+        onPress={() => navigation.navigate('Screen')}
+      />
+    </View>
+  );
+}
+
+function Screen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Home"
+        onPress={() => navigation.navigate('HomeScreen')}
+      />
+      <Button
+        title="Back"
+        onPress={() => navigation.goBack()}
+      />
+
+
+    </View>
+    // <Home />
+  );
+}
+
+const Stack = createStackNavigator();
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -55,13 +95,22 @@ export default class App extends Component {
     }
 
     return (
-      <Container>
-        {/* <Text>Open up App.js to start working on your app!</Text> */}
-        {/* <Profile/> */}
-        {/* <Transaction/> */}
-        {/* <Inbox /> */}
-        <Home/>
-      </Container>
+      <NavigationContainer>
+        <Container>
+          {/* <Text>Open up App.js to start working on your app!</Text> */}
+          {/* <Profile/> */}
+          {/* <Transaction/> */}
+          {/* <Inbox /> */}
+          {/* <Home/> */}
+          <Stack.Navigator screenOptions={{
+            headerShown: false,
+          }}>
+            <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ title: 'Overview' }} />
+            <Stack.Screen name="Screen" component={Screen} options={{ title: 'Screen' }} />
+          </Stack.Navigator>
+        </Container>
+      </NavigationContainer>
+
     );
   }
 }
