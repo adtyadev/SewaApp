@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import { Container, Body, Button, Badge, Header, Content, Card, CardItem, Text, Fab, Footer, FooterTab, Icon, Right, Switch, Left, ListItem, StyleProvider, List } from 'native-base';
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
+import Fabs from '../components/Fabs';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 export default class Profile extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false
-    };
-  }
+
   render() {
     return (
       <Container >
@@ -180,25 +176,38 @@ export default class Profile extends Component {
           </Card>
 
         </Content>
-        <Fab
-          active={this.state.active}
-          direction="up"
-          containerStyle={{}}
-          style={{ backgroundColor: '#5067FF' }}
-          position="bottomRight"
-          onPress={() => this.setState({ active: !this.state.active })}>
-          <Icon name="share" />
-          <Button style={{ backgroundColor: '#34A34F' }}>
-            <Icon name="logo-whatsapp" />
-          </Button>
-          <Button disabled style={{ backgroundColor: 'gray' }}>
-            <Icon name="mail" />
-          </Button>
-          <Button style={{ backgroundColor: '#3B5998' }}>
-            <Icon name="logo-facebook" />
-          </Button>
-
-        </Fab>
+        <Footer >
+          <FooterTab style={{ backgroundColor: "white" }}>
+            <Button vertical
+              onPress={() => this.props.navigation.navigate('Home')}>
+              <Icon active name="home" style={Styles.iconFooter} />
+              <Text style={Styles.font7Gray}>Home</Text>
+            </Button>
+            <Button vertical active
+              onPress={() => this.props.navigation.navigate('Profile')}
+            >
+              <Icon active name="person" style={Styles.iconFooter} />
+              <Text style={Styles.font7Gray}>Profile</Text>
+            </Button>
+            <Button vertical
+              onPress={() => this.props.navigation.navigate('Inbox')}
+            >
+              <Icon name="mail" style={Styles.iconFooter} />
+              <Text style={Styles.font7Gray}>Inbox</Text>
+            </Button>
+            <Button vertical
+              onPress={() => this.props.navigation.navigate('Transaction')}
+            >
+              <Icon name="document" style={Styles.iconFooter} />
+              <Text style={Styles.font7Gray}>Transaction</Text>
+            </Button>
+            <Button vertical>
+              <Icon name="cart" style={Styles.iconFooter} />
+              <Text style={Styles.font7Gray}>Cart</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
+        <Fabs />
       </Container>
     );
   }

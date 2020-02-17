@@ -4,18 +4,19 @@ import {
     Button,
     Icon,
     Title,
-    Header,
+    Header,FooterTab,Footer,
     Left, Right, Body,
-    Text,
+    Text,StyleProvider,
     Tab, Tabs, ScrollableTab,
-    StyleProvider, List
+    List
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 import Styles from '../css/Styles';
 import TransactionEmpty from '../components/TransactionEmpty';
 import TransactionCanceled from '../components/TransactionCanceled';
-// import getTheme from '../native-base-theme/components';  
-// import styleTheme from '../native-base-theme/variables/platform.js';
+import Fabs from '../components/Fabs';
+// import getTheme from '../native-base-theme/components';
+// import platform from '../native-base-theme/variables/platform';
 export default class Transaction extends Component {
 
     render() {
@@ -24,7 +25,9 @@ export default class Transaction extends Component {
                 {/* <Content> digunakan untuk scrollview pada page */}
                 <Header style={{ backgroundColor: "#00B0FF", marginTop: StatusBar.currentHeight }}>
                     <Left>
-                        <Button transparent>
+                        <Button transparent 
+                        onPress={()=>{this.props.navigation.goBack()}}
+                        >
                             <Icon name='arrow-back' />
                         </Button>
                     </Left>
@@ -110,6 +113,38 @@ export default class Transaction extends Component {
 
                     </Tab>
                 </Tabs>
+                <Footer >
+                    <FooterTab style={{ backgroundColor: "white" }}>
+                        <Button vertical 
+                        onPress={() => this.props.navigation.navigate('Home')}>
+                            <Icon active name="home" style={Styles.iconFooter} />
+                            <Text style={Styles.font7Gray}>Home</Text>
+                        </Button>
+                        <Button vertical
+                            onPress={() => this.props.navigation.navigate('Profile')}
+                        >
+                            <Icon name="person" style={Styles.iconFooter} />
+                            <Text style={Styles.font7Gray}>Profile</Text>
+                        </Button>
+                        <Button vertical
+                            onPress={() => this.props.navigation.navigate('Inbox')}
+                        >
+                            <Icon name="mail" style={Styles.iconFooter} />
+                            <Text style={Styles.font7Gray}>Inbox</Text>
+                        </Button>
+                        <Button vertical active
+                            onPress={() => this.props.navigation.navigate('Transaction')}
+                        >
+                            <Icon active name="document" style={Styles.iconFooter} />
+                            <Text style={Styles.font7Gray}>Transaction</Text>
+                        </Button>
+                        <Button vertical>
+                            <Icon name="cart" style={Styles.iconFooter} />
+                            <Text style={Styles.font7Gray}>Cart</Text>
+                        </Button>
+                    </FooterTab>
+                </Footer>
+                {/* <Fabs /> */}
             </Container>
         )
     }
