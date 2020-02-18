@@ -16,6 +16,7 @@ import Cart from './Cart';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
 const Stack = createStackNavigator();
 function HomeScreen({ navigation }) {
@@ -49,7 +50,8 @@ function Screen({ navigation }) {
     );
 }
 
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 export default class Navigation extends Component {
 
     render() {
@@ -71,12 +73,16 @@ export default class Navigation extends Component {
                 <Tab.Navigator
                     tabBarOptions={{
                         activeTintColor: '#00B0FF',
+                        showLabel :false
                     }}
+                    activeColor="#f0edf6"
+  inactiveColor="black"
+  barStyle={{ backgroundColor: "#00B0FF" }}
                 >
                     <Tab.Screen name="Home" component={Home}
                         options={{
                             tabBarLabel: 'Home',
-                            tabBarIcon: ({ color, size }) => (
+                            tabBarIcon: ({ color, size=20 }) => (
                                 <MaterialCommunityIcons name="home" color={color} size={size} />
                             ),
                         }}
@@ -84,7 +90,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Profile" component={Profile}
                         options={{
                             tabBarLabel: 'Profile',
-                            tabBarIcon: ({ color, size }) => (
+                            tabBarIcon: ({ color, size=20 }) => (
                                 <Ionicons name="ios-person" color={color} size={size} />
                             ),
                         }}
@@ -92,7 +98,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Inbox" component={Inbox}
                         options={{
                             tabBarLabel: 'Inbox',
-                            tabBarIcon: ({ color, size }) => (
+                            tabBarIcon: ({ color, size=20 }) => (
                                 <Ionicons name="ios-mail" color={color} size={size} />
                             ),
                         }}
@@ -100,7 +106,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Transaction" component={Transaction}
                         options={{
                             tabBarLabel: 'Transaction',
-                            tabBarIcon: ({ color, size }) => (
+                            tabBarIcon: ({ color, size=20 }) => (
                                 <Ionicons name="ios-document" color={color} size={size} />
                             ),
                         }}
@@ -108,7 +114,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Cart" component={Cart}
                         options={{
                             tabBarLabel: 'Cart',
-                            tabBarIcon: ({ color, size }) => (
+                            tabBarIcon: ({ color, size=20 }) => (
                                 <Ionicons name="ios-cart" color={color} size={size} />
                             ),
                         }}
