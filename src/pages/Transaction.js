@@ -113,38 +113,6 @@ export default class Transaction extends Component {
 
                     </Tab>
                 </Tabs>
-                <Footer >
-                    <FooterTab style={{ backgroundColor: "white" }}>
-                        <Button vertical 
-                        onPress={() => this.props.navigation.navigate('Home')}>
-                            <Icon active name="home" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Home</Text>
-                        </Button>
-                        <Button vertical
-                            onPress={() => this.props.navigation.navigate('Profile')}
-                        >
-                            <Icon name="person" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Profile</Text>
-                        </Button>
-                        <Button vertical
-                            onPress={() => this.props.navigation.navigate('Inbox')}
-                        >
-                            <Icon name="mail" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Inbox</Text>
-                        </Button>
-                        <Button vertical active
-                            onPress={() => this.props.navigation.navigate('Transaction')}
-                        >
-                            <Icon active name="document" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Transaction</Text>
-                        </Button>
-                        <Button vertical
-                        onPress={() => this.props.navigation.navigate('Chart')}>
-                            <Icon name="cart" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Cart</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer>
                 {/* <Fabs /> */}
             </Container>
         )

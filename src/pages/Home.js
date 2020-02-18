@@ -20,7 +20,7 @@ export default class Home extends Component {
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                     <Text style={{ fontSize: 30 }}> Home Page </Text>
                 </View>
-                <Footer>
+                {/* <Footer>
                     <FooterTab style={{ backgroundColor: "white" }}>
                         <Button vertical active>
                             <Icon active name="home" style={Styles.iconFooter} />
@@ -51,7 +51,7 @@ export default class Home extends Component {
                             <Text style={Styles.font7Gray}>Cart</Text>
                         </Button>
                     </FooterTab>
-                </Footer>
+                </Footer> */}
 
             </Container>
 

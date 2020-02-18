@@ -64,8 +64,8 @@ export default class App extends Component {
         {/* <Transaction/> */}
         {/* <Inbox /> */}
         {/* <Home/> */}
-        {/* <Navigation /> */}
-        <Example/>
+        <Navigation />
+        {/* <Example/> */}
       </Container>
 
     );
