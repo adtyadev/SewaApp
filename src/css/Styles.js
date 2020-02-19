@@ -201,6 +201,17 @@ export default StyleSheet.create({
     paddingVertical:15,
     paddingHorizontal:25
   },
+  buttonStyleMargin20:{
+    fontWeight: 'bold',
+    backgroundColor: '#00B0FF',
+    textAlign: 'center',
+    marginBottom:10,
+    borderRadius: 50,
+    fontSize: 15,
+    paddingVertical:15,
+    paddingHorizontal:25,
+    marginHorizontal:20
+  },
   // textButtonStyle: {
   //   fontSize: 25,
   //   color: 'white',

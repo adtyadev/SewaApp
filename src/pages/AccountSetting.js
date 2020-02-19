@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     Container, Body, Button,
-    Badge, Header, Content,Textarea,
+    Badge, Header, Content, Textarea,
     Card, CardItem, Text, Fab,
     Footer, FooterTab, Icon, Right,
     Switch, Left, ListItem, StyleProvider,
@@ -41,27 +41,21 @@ export default class AccountSetting extends Component {
                                     {/* <Text style={{ fontSize: 22, fontWeight: "bold", color: "#00B0FF" }}> Admin </Text> */}
                                     <Item floatingLabel>
                                         <Label>First name</Label>
-                                        <Input style={{ flex: 0.4 }} />
+                                        <Input style={{ flex: 0.4 }} value={"Aditya"} />
                                     </Item>
                                     <Item floatingLabel last>
                                         <Label>Last name</Label>
-                                        <Input style={{ flex: 0.4 }} />
+                                        <Input style={{ flex: 0.4 }} value={"Kharis"} />
                                     </Item>
-                                    {/* <Item regular>
-            <Input placeholder='Regular Textbox' style={{flex:0.2}} />
-          </Item>
-          <Item regular>
-            <Input placeholder='Regular Textbox' style={{flex:0.2}} />
-          </Item> */}
                                 </View>
 
                                 <Item error>
-                                    <Input placeholder='Textbox with Error Input' />
-                                    <Icon name='close-circle' />
+                                    <Input placeholder='Textbox with Error Input' value={"akharismaw77@gmail.com"} />
+                                    <Icon name='ios-alert' />
                                 </Item>
 
                                 <Item success>
-                                    <Input placeholder='Textbox with Success Input' />
+                                    <Input placeholder='Textbox with Success Input' value={"+6285799599692"} />
                                     <Icon name='checkmark-circle' />
                                 </Item>
 
@@ -118,46 +112,28 @@ export default class AccountSetting extends Component {
                                         Hobi :
                                         </Text>
                                     <Item>
-                                        <Input placeholder="Underline Textbox" value="Photography, Traveling"/>
+                                        <Input placeholder="Underline Textbox" value="Photography, Traveling" />
                                     </Item>
                                 </View>
-                                <View style={Styles.flexCenterColumn, { justifyContent: "flex-start",marginTop:20 }}>
+                                <View style={Styles.flexCenterColumn, { justifyContent: "flex-start", marginTop: 20 }}>
                                     <Text note style={{ paddingLeft: 20 }}>
                                         Interest :
                                         </Text>
-                                    <Textarea rowSpan={4} bordered placeholder="Textarea" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. " style={{marginLeft:20 }}/>
-                                    
-                                </View>
+                                    <Textarea rowSpan={4} bordered placeholder="Textarea" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. " style={{ marginLeft: 20 }} />
 
-
-                                <View style={{ alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                                    <Text style={{ fontSize: 22, fontWeight: "bold", color: "#00B0FF" }}> Admin </Text>
-                                    <Text> Referral ID : 085799599692 </Text>
                                 </View>
-                                <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-around" }}>
-                                    <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                                        <Icon name="star" style={Styles.starSmall} style={{ color: "black" }} />
-                                        <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
-                                        <Text > Points </Text>
-                                    </View>
-                                    <View style={{ width: 70, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                                        <Icon active name="star" />
-                                        <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
-                                        <Text> Points </Text>
-                                    </View>
-                                    <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                                        <Icon active name="star" style={Styles.starSmall} style={{ color: "black" }} />
-                                        <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> Rp 0 </Text>
-                                        <Text> Points </Text>
-                                    </View>
+                                <View style={Styles.flexCenterColumn, { alignItems: "center", marginTop: 20 }}>
+                                    <Text style={{ color: "#00B0FF" }}> Change Password </Text>
+                                    <Text style={{ color: "#00B0FF" }}> Change Email / Phone Number </Text>
                                 </View>
-
                             </View>
                         </Form>
 
 
                     </Card>
-
+                    <Button full style={Styles.buttonStyleMargin20}>
+                        <Text>Save Profile</Text>
+                    </Button>
                 </Content>
             </Container>
         )
