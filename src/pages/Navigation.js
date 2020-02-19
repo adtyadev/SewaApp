@@ -50,8 +50,8 @@ function Screen({ navigation }) {
     );
 }
 
-// const Tab = createBottomTabNavigator();
-const Tab = createMaterialBottomTabNavigator();
+ const Tab = createBottomTabNavigator();
+//const Tab = createMaterialBottomTabNavigator();
 export default class Navigation extends Component {
 
     render() {
@@ -73,7 +73,7 @@ export default class Navigation extends Component {
                 <Tab.Navigator
                     tabBarOptions={{
                         activeTintColor: '#00B0FF',
-                        showLabel :false
+                        showLabel :true
                     }}
                     activeColor="#f0edf6"
   inactiveColor="black"
