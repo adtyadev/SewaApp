@@ -149,6 +149,16 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: "row",
   },
+  flexCenterColumn:{ 
+  alignItems: "center", 
+  justifyContent: "space-around", 
+  flexWrap: "wrap", 
+  flexDirection: 'column' },
+  flexCenterRow:{ 
+    alignItems: "center", 
+    justifyContent: "space-around", 
+    flexWrap: "wrap", 
+    flexDirection: 'row' },
   starSmall: {
     fontSize: 20,
     color: "#FF9100",

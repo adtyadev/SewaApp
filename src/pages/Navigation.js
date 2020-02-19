@@ -10,6 +10,7 @@ import Profile from './Profile';
 import Transaction from './Transaction';
 import Inbox from './Inbox';
 import Home from './Home';
+import AccountSetting from './AccountSetting';
 import Cart from './Cart';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
@@ -50,7 +51,7 @@ function Screen({ navigation }) {
     );
 }
 
- const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 //const Tab = createMaterialBottomTabNavigator();
 export default class Navigation extends Component {
 
@@ -73,16 +74,16 @@ export default class Navigation extends Component {
                 <Tab.Navigator
                     tabBarOptions={{
                         activeTintColor: '#00B0FF',
-                        showLabel :true
+                        showLabel: true
                     }}
                     activeColor="#f0edf6"
-  inactiveColor="black"
-  barStyle={{ backgroundColor: "#00B0FF" }}
+                    inactiveColor="black"
+                    barStyle={{ backgroundColor: "#00B0FF" }}
                 >
-                    <Tab.Screen name="Home" component={Home}
+                    <Tab.Screen name="Home" component={AccountSetting}
                         options={{
                             tabBarLabel: 'Home',
-                            tabBarIcon: ({ color, size=20 }) => (
+                            tabBarIcon: ({ color, size = 20 }) => (
                                 <MaterialCommunityIcons name="home" color={color} size={size} />
                             ),
                         }}
@@ -90,7 +91,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Profile" component={Profile}
                         options={{
                             tabBarLabel: 'Profile',
-                            tabBarIcon: ({ color, size=20 }) => (
+                            tabBarIcon: ({ color, size = 20 }) => (
                                 <Ionicons name="ios-person" color={color} size={size} />
                             ),
                         }}
@@ -98,7 +99,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Inbox" component={Inbox}
                         options={{
                             tabBarLabel: 'Inbox',
-                            tabBarIcon: ({ color, size=20 }) => (
+                            tabBarIcon: ({ color, size = 20 }) => (
                                 <Ionicons name="ios-mail" color={color} size={size} />
                             ),
                         }}
@@ -106,7 +107,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Transaction" component={Transaction}
                         options={{
                             tabBarLabel: 'Transaction',
-                            tabBarIcon: ({ color, size=20 }) => (
+                            tabBarIcon: ({ color, size = 20 }) => (
                                 <Ionicons name="ios-document" color={color} size={size} />
                             ),
                         }}
@@ -114,7 +115,7 @@ export default class Navigation extends Component {
                     <Tab.Screen name="Cart" component={Cart}
                         options={{
                             tabBarLabel: 'Cart',
-                            tabBarIcon: ({ color, size=20 }) => (
+                            tabBarIcon: ({ color, size = 20 }) => (
                                 <Ionicons name="ios-cart" color={color} size={size} />
                             ),
                         }}
