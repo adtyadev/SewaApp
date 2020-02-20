@@ -3,33 +3,18 @@ import { Container, Body, Button, Badge, Header, Content, Card, CardItem, Text, 
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
 import Fabs from '../components/Fabs';
+
+
+
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
+
+
 export default class Profile extends Component {
 
   render() {
     return (
       <Container >
-        {/* <View style={{ flex: 1 }}>
-          <Fab
-            active={this.state.active}
-            direction="up"
-            containerStyle={{ }}
-            style={{ backgroundColor: '#5067FF' }}
-            position="bottomRight"
-            onPress={() => this.setState({ active: !this.state.active })}>
-            <Icon name="share" />
-            <Button style={{ backgroundColor: '#34A34F' }}>
-              <Icon name="logo-whatsapp" />
-            </Button>
-            <Button style={{ backgroundColor: '#3B5998' }}>
-              <Icon name="logo-facebook" />
-            </Button>
-            <Button disabled style={{ backgroundColor: '#DD5144' }}>
-              <Icon name="mail" />
-            </Button>
-          </Fab>
-        </View> */}
         <Content >
           <View style={Styles.backgroundAbsolute}></View>
 
@@ -77,7 +62,11 @@ export default class Profile extends Component {
                   <Text>2</Text>
                 </Badge>
               </Body> */}
-            <CardItem bordered button>
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('AccountSetting')
+              }}
+            >
               <Icon active name="person" />
               <Text style={Styles.textCardItem}>Account Setting</Text>
               <Right >
@@ -177,6 +166,9 @@ export default class Profile extends Component {
 
         </Content>
         <Fabs />
+
+
+
       </Container>
     );
   }
