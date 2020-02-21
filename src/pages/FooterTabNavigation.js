@@ -19,8 +19,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
-import ProfileNav from './ProfileNav';
 const Stack = createStackNavigator();
+
 function HomeScreen({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -72,58 +72,58 @@ export default class FooterTabNavigation extends Component {
             //         </Stack.Navigator>
             //     </NavigationContainer>
             // </Container>
-                <Tab.Navigator
-                    tabBarOptions={{
-                        activeTintColor: '#00B0FF',
-                        showLabel: true
+            <Tab.Navigator
+                tabBarOptions={{
+                    activeTintColor: '#00B0FF',
+                    showLabel: true
+                }}
+                activeColor="#f0edf6"
+                inactiveColor="black"
+                barStyle={{ backgroundColor: "#00B0FF" }}
+            >
+                <Tab.Screen name="Home" component={Home}
+                    options={{
+                        tabBarLabel: 'Home',
+                        tabBarIcon: ({ color, size = 20 }) => (
+                            <MaterialCommunityIcons name="home" color={color} size={size} />
+                        ),
                     }}
-                    activeColor="#f0edf6"
-                    inactiveColor="black"
-                    barStyle={{ backgroundColor: "#00B0FF" }}
-                >
-                    <Tab.Screen name="Home" component={Home}
-                        options={{
-                            tabBarLabel: 'Home',
-                            tabBarIcon: ({ color, size = 20 }) => (
-                                <MaterialCommunityIcons name="home" color={color} size={size} />
-                            ),
-                        }}
-                    />
-                    <Tab.Screen name="Profile" component={Profile}
-                        options={{
-                            tabBarLabel: 'Profile',
-                            tabBarIcon: ({ color, size = 20 }) => (
-                                <Ionicons name="ios-person" color={color} size={size} />
-                            ),
-                        }}
-                    />
-                    <Tab.Screen name="Inbox" component={Inbox}
-                        options={{
-                            tabBarLabel: 'Inbox',
-                            tabBarIcon: ({ color, size = 20 }) => (
-                                <Ionicons name="ios-mail" color={color} size={size} />
-                            ),
-                        }}
-                    />
-                    <Tab.Screen name="Transaction" component={Transaction}
-                        options={{
-                            tabBarLabel: 'Transaction',
-                            tabBarIcon: ({ color, size = 20 }) => (
-                                <Ionicons name="ios-document" color={color} size={size} />
-                            ),
-                        }}
-                    />
-                    <Tab.Screen name="Cart" component={Cart}
-                        options={{
-                            tabBarLabel: 'Cart',
-                            tabBarIcon: ({ color, size = 20 }) => (
-                                <Ionicons name="ios-cart" color={color} size={size} />
-                            ),
-                        }}
-                    />
-                </Tab.Navigator>
+                />
+                <Tab.Screen name="Profile" component={Profile}
+                    options={{
+                        tabBarLabel: 'Profile',
+                        tabBarIcon: ({ color, size = 20 }) => (
+                            <Ionicons name="ios-person" color={color} size={size} />
+                        ),
+                    }}
+                />
+                <Tab.Screen name="Inbox" component={Inbox}
+                    options={{
+                        tabBarLabel: 'Inbox',
+                        tabBarIcon: ({ color, size = 20 }) => (
+                            <Ionicons name="ios-mail" color={color} size={size} />
+                        ),
+                    }}
+                />
+                <Tab.Screen name="Transaction" component={Transaction}
+                    options={{
+                        tabBarLabel: 'Transaction',
+                        tabBarIcon: ({ color, size = 20 }) => (
+                            <Ionicons name="ios-document" color={color} size={size} />
+                        ),
+                    }}
+                />
+                <Tab.Screen name="Cart" component={Cart}
+                    options={{
+                        tabBarLabel: 'Cart',
+                        tabBarIcon: ({ color, size = 20 }) => (
+                            <Ionicons name="ios-cart" color={color} size={size} />
+                        ),
+                    }}
+                />
+            </Tab.Navigator>
 
-            
+
         );
     }
 }

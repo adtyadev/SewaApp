@@ -6,7 +6,7 @@ import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import Styles from './src/css/Styles';
-import Navigation from './src/pages/Navigation';
+import StackNavigation from './src/pages/StackNavigation';
 import Example from './src/pages/example';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -64,7 +64,7 @@ export default class App extends Component {
         {/* <Transaction/> */}
         {/* <Inbox /> */}
         {/* <Home/> */}
-        <Navigation />
+        <StackNavigation />
         {/* <Example/> */}
       </Container>
 

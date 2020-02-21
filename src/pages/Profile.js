@@ -50,18 +50,10 @@ export default class Profile extends Component {
               </View>
 
             </View>
-            {/* <Body style={{backgroundColor:"red"}}>
-                <Text>
-                  NativeBase is a free and open source framework that enable
-                  developers to build
-                  high-quality mobile apps using React Native iOS and Android
-                  apps
-                  with a fusion of ES6.
-                </Text>
-                <Badge>
-                  <Text>2</Text>
-                </Badge>
-              </Body> */}
+            <Body style={{ backgroundColor: "red" }}>
+              <Text>
+              </Text>
+            </Body>
             <CardItem bordered button
               onPress={() => {
                 this.props.navigation.navigate('AccountSetting')
@@ -74,7 +66,11 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
-            <CardItem bordered button>
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('Verification')
+              }}
+            >
               <Icon active name="finger-print" />
               <Text style={Styles.textCardItem}>Verification</Text>
               <Right >
@@ -82,7 +78,11 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
-            <CardItem bordered button>
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('Address')
+              }}
+            >
               <Icon active name="home" />
               <Text style={Styles.textCardItem}>Address</Text>
               <Right >
@@ -90,7 +90,11 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
-            <CardItem bordered button>
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('Chat')
+              }}
+            >
               <Icon active name="chatbubbles" />
               <Text style={Styles.textCardItem}>Chat</Text>
               <Right >
@@ -98,7 +102,11 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
-            <CardItem bordered button>
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('Complain')
+              }}
+            >
               <Icon active name="call" />
               <Text style={Styles.textCardItem}>Complain</Text>
               <Right >
@@ -106,7 +114,11 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
-            <CardItem bordered button >
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('InputAndSuggestion')
+              }}
+            >
               <Icon active name="infinite" />
               <Text style={Styles.textCardItem}>Input And Suggestion</Text>
               <Right >
@@ -114,41 +126,13 @@ export default class Profile extends Component {
               </Right>
             </CardItem>
 
-            <CardItem bordered button>
+            <CardItem bordered button
+              onPress={() => {
+                this.props.navigation.navigate('ChangeLanguage')
+              }}
+            >
               <Icon active name="globe" />
               <Text style={Styles.textCardItem}>Change Language</Text>
-              <Right >
-                <Icon name="arrow-forward" />
-              </Right>
-            </CardItem>
-
-            <CardItem bordered button>
-              <Icon active name="undo" />
-              <Text style={Styles.textCardItem}>Sign Out</Text>
-              <Right >
-                <Icon name="arrow-forward" />
-              </Right>
-            </CardItem>
-
-            <CardItem bordered button>
-              <Icon active name="undo" />
-              <Text style={Styles.textCardItem}>Sign Out</Text>
-              <Right >
-                <Icon name="arrow-forward" />
-              </Right>
-            </CardItem>
-
-            <CardItem bordered button>
-              <Icon active name="undo" />
-              <Text style={Styles.textCardItem}>Sign Out</Text>
-              <Right >
-                <Icon name="arrow-forward" />
-              </Right>
-            </CardItem>
-
-            <CardItem bordered button>
-              <Icon active name="undo" />
-              <Text style={Styles.textCardItem}>Sign Out</Text>
               <Right >
                 <Icon name="arrow-forward" />
               </Right>

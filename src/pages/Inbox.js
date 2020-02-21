@@ -11,6 +11,9 @@ import PromoEmpty from '../components/PromoEmpty';
 // import styleTheme from '../native-base-theme/variables/platform.js';
 export default class Inbox extends Component {
 
+    LoopNotificationCard(){
+        <NotificationCards />
+    }
     render() {
         return (
             <Container style={{ backgroundColor: "#23B0FF" }}>

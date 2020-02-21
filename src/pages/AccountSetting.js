@@ -5,14 +5,16 @@ import {
     Card, CardItem, Text, Fab,
     Footer, FooterTab, Icon, Right,
     Switch, Left, ListItem, StyleProvider,
-    List, Form, Item, Input, Label, DatePicker, Picker
+    List, Form, Item, Input, Label, Picker
 } from 'native-base';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 
 export default class AccountSetting extends Component {
+    
     constructor(props) {
         super(props);
         this.state = { chosenDate: new Date(), selected2: undefined };
@@ -22,7 +24,7 @@ export default class AccountSetting extends Component {
     setDate(newDate) {
         this.setState({ chosenDate: newDate });
     }
-    onValueChange2(value: string) {
+    onValueChange2(value) {
         this.setState({
             selected2: value
         });
@@ -64,21 +66,7 @@ export default class AccountSetting extends Component {
                                         <Text>
                                             Birthdate :
                                     </Text>
-                                        <DatePicker
-                                            defaultDate={new Date(2018, 4, 4)}
-                                            minimumDate={new Date(2018, 1, 1)}
-                                            maximumDate={new Date(2018, 12, 31)}
-                                            locale={"en"}
-                                            timeZoneOffsetInMinutes={undefined}
-                                            modalTransparent={false}
-                                            animationType={"fade"}
-                                            androidMode={"default"}
-                                            placeHolderText="Select date"
-                                            textStyle={{ color: "green" }}
-                                            placeHolderTextStyle={{ color: "#d3d3d3" }}
-                                            onDateChange={this.setDate}
-                                            disabled={false}
-                                        />
+                                       
                                         <Text note>
                                             Date: {this.state.chosenDate.toString().substr(4, 12)}
                                         </Text>

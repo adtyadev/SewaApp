@@ -2,3 +2,6 @@ deppendencies build android for enable screen ( react-native-screen )
 deppendencies build android for gif in splash screen 
 
 install dependencies harus ditambhakan --save
+
+reset cache 
+npm cache clean --force & npm install & expo r -c
