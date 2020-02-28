@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import {
     Container, Body, Button,
     Badge, Header, Content, Textarea,
-    Card, CardItem, Text, Fab,
+    Card, CardItem, Text, Fab,Title,
     Footer, FooterTab, Icon, Right,
     Switch, Left, ListItem, StyleProvider,
     List, Form, Item, Input, Label, Picker
 } from 'native-base';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { View, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Dimensions, StatusBar, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 
 export default class AccountSetting extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = { chosenDate: new Date(), selected2: undefined };
@@ -33,7 +33,22 @@ export default class AccountSetting extends Component {
         return (
             <Container >
                 <Content >
-                    <View style={Styles.backgroundAbsolute}></View>
+                    <View style={Styles.backgroundAbsolute}>
+                        <Header style={{ backgroundColor: "#00B0FF", marginTop: StatusBar.currentHeight }} >
+                            <Left>
+                                <Button transparent
+                                    onPress={() => { this.props.navigation.goBack() }}
+                                >
+                                    <Icon name='arrow-back' />
+                                </Button>
+                            </Left>
+                            <Body>
+                                <Title>Account Setting</Title>
+                            </Body>
+                            <Right>
+                            </Right>
+                        </Header>
+                    </View>
 
                     <Card style={Styles.cardProfile} >
                         <Form >
@@ -66,7 +81,7 @@ export default class AccountSetting extends Component {
                                         <Text>
                                             Birthdate :
                                     </Text>
-                                       
+
                                         <Text note>
                                             Date: {this.state.chosenDate.toString().substr(4, 12)}
                                         </Text>

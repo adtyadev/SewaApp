@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Body, Button, Badge, Header, Content, Card, CardItem, Text, Fab, Footer, FooterTab, Icon, Right, Switch, Left, ListItem, StyleProvider, List } from 'native-base';
-import { View, Dimensions, TouchableOpacity } from 'react-native';
+import { Container, Title, Body, Button, Badge, Header, Content, Card, CardItem, Text, Fab, Footer, FooterTab, Icon, Right, Switch, Left, ListItem, StyleProvider, List } from 'native-base';
+import { View, Dimensions, StatusBar, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
 import Fabs from '../components/Fabs';
 
@@ -16,7 +16,23 @@ export default class Profile extends Component {
     return (
       <Container >
         <Content >
-          <View style={Styles.backgroundAbsolute}></View>
+
+          <View style={Styles.backgroundAbsolute}>
+            <Header style={{ backgroundColor: "#00B0FF", marginTop: StatusBar.currentHeight }} >
+              <Left>
+                <Button transparent
+                  onPress={() => { this.props.navigation.goBack() }}
+                >
+                  <Icon name='arrow-back' />
+                </Button>
+              </Left>
+              <Body>
+                <Title>Inbox</Title>
+              </Body>
+              <Right>
+              </Right>
+            </Header>
+          </View>
 
           <Card style={Styles.cardProfile} >
             <View style={{ flex: 1, flexDirection: 'column' }}>

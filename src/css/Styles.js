@@ -16,7 +16,7 @@ export default StyleSheet.create({
   },
   backgroundAbsolute: {
     height: 210,
-    width: ((Dimensions.get('window').height)),
+    width: ((Dimensions.get('window').width)),
     backgroundColor: "#00B0FF",
     position: 'absolute'
   },
