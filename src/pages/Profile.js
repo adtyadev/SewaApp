@@ -27,7 +27,7 @@ export default class Profile extends Component {
                 </Button>
               </Left>
               <Body>
-                <Title>Inbox</Title>
+                <Title>Profile</Title>
               </Body>
               <Right>
               </Right>

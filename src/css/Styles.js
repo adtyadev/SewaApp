@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Dimensions
+  Dimensions,
+  Constants
 } from 'react-native';
 
 export default StyleSheet.create({
@@ -139,15 +140,25 @@ export default StyleSheet.create({
     paddingLeft: 18,
     paddingRight: 10,
   },
+  centerOfStatusBar:{
+    justifyContent:"center",
+    alignItems:"center",
+    marginLeft:Dimensions.get('window').width*1/5,
+  },
   flex1Column: {
-    backgroundColor: "white",
+    //backgroundColor: "white",
     flex: 1,
     flexDirection: "column",
   },
   flex1Row: {
-    backgroundColor: "white",
+    //backgroundColor: "white",
     flex: 1,
     flexDirection: "row",
+  },
+  flex1RowSpaceBetween:{
+    flex: 1,
+    flexDirection: "row",
+    justifyContent:"space-between"
   },
   flexCenterColumn:{ 
   alignItems: "center", 
