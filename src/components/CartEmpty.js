@@ -12,7 +12,7 @@ export default class CartEmpty extends Component {
 
     render() {
         return (
-            <Container style={Styles.flex1Column,{justifyContent:"space-around", alignItems:"center",}}>
+            <Container style={{justifyContent:"space-around", alignItems:"center"}}>
                 {/* <Content> digunakan untuk scrollview pada page */}
                     <Text note style={{ fontSize: 15, marginTop:10 }}>Your Shoopinng Cart is Empty</Text>
                     <Image source={require('../img/chart-empty.png')} style={Styles.imageChartEmpty} />

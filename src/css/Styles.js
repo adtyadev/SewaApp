@@ -119,6 +119,11 @@ export default StyleSheet.create({
     width: 250,
     marginVertical:50,
   },
+  imageVerifyId: {
+    height: 200,
+    width: 200,
+    marginTop:50,
+  },
   imageSplashScreen: {
     height: (Dimensions.get('window').height)-100,
     width: (Dimensions.get('window').width)-100,
@@ -164,12 +169,19 @@ export default StyleSheet.create({
   alignItems: "center", 
   justifyContent: "space-around", 
   flexWrap: "wrap", 
-  flexDirection: 'column' },
+  flexDirection: 'column' 
+},
   flexCenterRow:{ 
     alignItems: "center", 
     justifyContent: "space-around", 
     flexWrap: "wrap", 
-    flexDirection: 'row' },
+    flexDirection: 'row' 
+  },
+    flexCenterColumnSpaceAround:{
+      alignItems: "center", 
+      justifyContent: "space-around", 
+      flexDirection: 'column' 
+    },
   starSmall: {
     fontSize: 20,
     color: "#FF9100",

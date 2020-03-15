@@ -23,7 +23,7 @@ export default class Cart extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title>Chart</Title>
+                        <Title>Cart</Title>
                     </Body>
                     <Right>
                         <Button transparent>
