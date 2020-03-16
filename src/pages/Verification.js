@@ -25,7 +25,7 @@ export default class Verification extends Component {
                         </Button> */}
                     </Left>
                     <Body style={Styles.centerOfStatusBar}>
-                        <Title>Verification</Title>
+                        <Title>Verification ID</Title>
                     </Body>
                     <Right style={{ marginRight: 0 }}>
                         <Ionicons name="ios-information-circle-outline" color={"white"} size={22} />
@@ -49,7 +49,9 @@ export default class Verification extends Component {
                     </Text>
                     </View>
                     <View style={{ flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 30, flexDirection: "column" }}>
-                        <Button block style={Styles.buttonStyle}>
+                        <Button block style={Styles.buttonStyle}
+                        onPress={() => {  this.props.navigation.navigate('VerificationDocument') }}
+                        >
                             <Text>Verify</Text>
                         </Button>
                         <TouchableOpacity 

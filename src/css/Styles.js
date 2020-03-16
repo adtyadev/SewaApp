@@ -128,6 +128,13 @@ export default StyleSheet.create({
     height: (Dimensions.get('window').height)-100,
     width: (Dimensions.get('window').width)-100,
   },
+  lineCenterBlue:{
+    borderBottomColor: '#00B0FF',
+    height:3,
+    backgroundColor: "#00B0FF",
+    marginLeft: 5,
+    marginRight: 5,
+},
   headerAccordionSmall: {
     backgroundColor: "#b7daf8",
     backgroundColor: "white",
