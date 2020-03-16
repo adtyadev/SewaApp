@@ -3,7 +3,7 @@ import {
     Container,
     Text, Header, Button, Left, Title, Icon, Body,
     Tab, Tabs, ScrollableTab, Right,
-    StyleProvider, List, Badge,
+    StyleProvider, List, Badge, Content,
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 import Styles from '../css/Styles';
@@ -16,6 +16,7 @@ export default class VerificationDocument extends Component {
         return (
             <Container style={{}}>
                 {/* <Content> digunakan untuk scrollview pada page */}
+
                 <Header style={{ backgroundColor: "#00B0FF", marginTop: StatusBar.currentHeight }} >
                     <Left>
                         <Button transparent
@@ -69,7 +70,7 @@ export default class VerificationDocument extends Component {
 
                         </Button>
                         <Button bordered success style={{ backgroundColor: "white", marginTop: 10 }}
-                            onPress={() => { this.props.navigation.goBack() }}>
+                            onPress={() => { this.props.navigation.navigate('VerificationEmail') }}>
                             <Left style={{}}>
                                 <Button transparent
                                 >

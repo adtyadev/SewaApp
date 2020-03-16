@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Container,
+    Container,Content,
     Text, Header, Button, Left, Title, Icon, Body,
     Tab, Tabs, ScrollableTab, Right,
     StyleProvider, List
@@ -63,12 +63,9 @@ export default class Verification extends Component {
                     <Text>Close</Text>
                     </Button>
                     </View>
-                    
-                   
-
-                        
                     </View>
                 </Modal>
+                <Content>
                 <Container style={Styles.flex1Column}>
                     <View style={{
                         flex: 2, alignItems: "center",
@@ -103,6 +100,7 @@ export default class Verification extends Component {
                     </View>
 
                 </Container>
+                </Content>
             </Container>
         )
     }

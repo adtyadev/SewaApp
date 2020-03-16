@@ -80,6 +80,11 @@ export default StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10
   },
+  emailVerifyId:{
+    height: 170,
+    width: 170,
+    marginTop:50,
+  },
   fontBold12BlackPd10: {
     fontSize: 12,
     color: "black",
