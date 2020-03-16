@@ -10,6 +10,8 @@ import Styles from '../css/Styles';
 import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
+const deviceHeight = (Dimensions.get('window').height);
+const deviceWidth = (Dimensions.get('window').width);
 export default class VerificationDocument extends Component {
 
     render() {
@@ -37,12 +39,12 @@ export default class VerificationDocument extends Component {
                         <Text style={Styles.lineCenterBlue}> ______--______________ </Text>
                     </View>
                     <View style={{ flex: 8, alignItems: "center", backgroundColor: "white", justifyContent: "flex-start" }}>
-                        <Text style={{ fontSize: 29, paddingVertical: 15, fontWeight: "bold", color: "#616161" }}>
+                        <Text style={{ fontSize: deviceWidth*(7.3/100), paddingVertical: 15, fontWeight: "bold", color: "#616161" }}>
                             Select the type of document you wish to scan </Text>
-                        <Text note style={{ fontSize: 17, lineHeight: 30, textAlign: "left", paddingVertical: 10 }}>
+                        <Text note style={{ fontSize: deviceWidth*(4.13/100), lineHeight: 30, textAlign: "left", paddingVertical: 10 }}>
                             We need to determine if an identity document is authentic and belongs to you.
                         </Text>
-                        <Text note style={{ fontSize: 17, lineHeight: 30, textAlign: "left", paddingVertical: 10 }}>
+                        <Text note style={{ fontSize: deviceWidth*(4.13/100), lineHeight: 30, textAlign: "left", paddingVertical: 10 }}>
                             Indonesia has been set as issuing country of yout documents.
                         </Text>
                         <Button style={{ backgroundColor: "white", marginTop: 40 }}

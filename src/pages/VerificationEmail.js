@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Container,
+    Container, Card, CardItem,
     Text, Header, Button, Left, Title, Icon, Body, Input,
     Tab, Tabs, ScrollableTab, Right, Item, Label,
     StyleProvider, List, Form, Content,
@@ -11,7 +11,8 @@ import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
 import Modal from "react-native-modal";
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
-// const deviceHeight = (Dimensions.get('window').height)-300;
+const deviceHeight = (Dimensions.get('window').height);
+const deviceWidth = (Dimensions.get('window').width);
 export default class VerificationEmail extends Component {
 
     state = {
@@ -65,57 +66,71 @@ export default class VerificationEmail extends Component {
                         </View>
                     </View>
                 </Modal>
-                <Content>
-                    <View style={Styles.flex1Column}>
-                        <View style={{
-                            flex: 1, alignItems: "center",
-                            paddingHorizontal: 30,
-                            flexDirection: 'column',
-                            backgroundColor: "#f7fafb"
-                        }}>
-                            <Image source={require('../img/verify_email.png')} style={Styles.emailVerifyId} />
-                            <Text style={{ fontSize: 30, paddingVertical: 15, fontWeight: "bold", color: "#616161" }}> Verification Email </Text>
+                {/* <Content> */}
+                <Container style={Styles.flex1Column}>
+                    <View style={{
+                        flex: 1, alignItems: "center",
+                        paddingHorizontal: 30,
+                        flexDirection: 'column',
+                        backgroundColor: "#f7fafb"
+                    }}>
+                        <Image source={require('../img/verify_email.png')} style={Styles.emailVerifyId,{height: (Dimensions.get('window').height)*19.201/100,
+    width: (Dimensions.get('window').width)*41.319/100,marginTop:20}} />
+                        <Text style={{ fontSize: deviceWidth * (7.3 / 100), paddingVertical: 15, fontWeight: "bold", color: "#616161" }}>  Verification Email </Text>
 
-                            <Text note style={{ fontSize: 17, lineHeight: 30, textAlign: "center", paddingVertical: 10 }}>
-                                We will send you an email verification code on this email. this code activate for 15 minutes.
+                        <Text note style={{ fontSize: deviceWidth * (4.13 / 100), lineHeight: 30, textAlign: "center", paddingVertical: 10 }}>
+                            We will send you an email verification code on this email. this code activate for 15 minutes. 
                     </Text>
-                            <Text note style={{ fontSize: 20, lineHeight: 30, textAlign: "center", paddingVertical: 50 }}>
-                                Enter your email
+                        <Text style={{ fontSize: deviceWidth * (4.13 / 100) + 3, lineHeight: 15, textAlign: "center", paddingVertical: 50 }}>
+                            Enter your email
                     </Text>
-                        </View>
+                    </View>
 
-                        <View style={{ flex: 1, alignItems: "center", backgroundColor:"red", justifyContent: "flex-start", paddingHorizontal: 30, flexDirection: "column" }}>
-                            <View style={{ backgroundColor: "white", width: 370, padding: 20, shadowColor: "red", shadowOffset: 10 }}>
+                    <View style={{ flex: 1, alignItems: "center", backgroundColor: "#f7fafb", justifyContent: "flex-start", paddingHorizontal: 30, flexDirection: "column" }}>
 
-                                <Form style={{ marginBottom: 20 }}>
-                                    <Item >
-                                        <Label><Ionicons name="ios-mail" color={"gray"} size={22} /></Label>
-                                        <Input placeholder="adtyadev@admin.id" />
-                                        <Right>
-                                            <Text>Hai</Text>
-                                        </Right>
-                                    </Item>
-                                </Form>
+                        <Card style={{width:370,borderRadius: 5,padding: 10,}}>
+                            <CardItem>
 
-                                <Button block style={Styles.buttonStyle}
-                                    onPress={() => { this.props.navigation.navigate('VerificationDocument') }}
-                                >
-                                    <Text>Verify</Text>
-                                </Button>
-                                <TouchableOpacity
-                                    onPress={() => { this.props.navigation.goBack() }}
-                                >
-                                    <Text note style={{ fontSize: 17, color: "#23B0FF", lineHeight: 30, textAlign: "center", paddingVertical: 5 }}>
-                                        Don't have ID. Cancel Verification
-                    </Text>
-                                </TouchableOpacity>
-                            </View>
+                                <View style={{ flex:1,backgroundColor: "white"}}>
+
+                                    <Form style={{ marginBottom: 20 }}>
+                                        <Item >
+                                            <Label><Ionicons name="ios-mail" color={"gray"} size={22} /></Label>
+                                            <Input placeholder="adtyadev@admin.id" />
+                                            <Right>
+                                            <Ionicons name="md-checkmark-circle" color={"green"} size={25} />
+                                            </Right>
+                                        </Item>
+                                    </Form>
+
+                                    <Button block style={Styles.buttonStyle}
+                                        onPress={() => { this.props.navigation.navigate('VerificationDocument') }}
+                                    >
+                                        <Text>Send Code OTP</Text>
+                                    </Button>
+                                    <TouchableOpacity
+                                        onPress={() => { this.props.navigation.goBack() }}
+                                    >
+                                        <Text note style={{ fontSize: 17, color: "#23B0FF", textAlign: "center", paddingVertical: 5 }}>
+                                            Don't have ID. Cancel Verification
+    </Text>
+                                    </TouchableOpacity>
 
 
-                        </View>
+
+                                </View>
+
+                            </CardItem>
+                        </Card>
+
+
 
                     </View>
-                </Content>
+
+
+
+                </Container>
+                {/* </Content> */}
 
             </Container>
         )

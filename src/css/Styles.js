@@ -81,9 +81,14 @@ export default StyleSheet.create({
     paddingRight: 10
   },
   emailVerifyId:{
-    height: 170,
-    width: 170,
+    height: (Dimensions.get('window').height)*41.319/100,
+    width: (Dimensions.get('window').width)*19.201/100,
+    //height:169.99278933,
+    //width: 169.99278933,
     marginTop:50,
+  },
+  emailVerifyInput:{
+    
   },
   fontBold12BlackPd10: {
     fontSize: 12,
@@ -125,9 +130,9 @@ export default StyleSheet.create({
     marginVertical:50,
   },
   imageVerifyId: {
-    height: 200,
-    width: 200,
-    marginTop:50,
+    height: (Dimensions.get('window').height)*1/4,
+    width: (Dimensions.get('window').width)*1/2,
+    marginTop:10
   },
   imageSplashScreen: {
     height: (Dimensions.get('window').height)-100,
@@ -225,6 +230,14 @@ export default StyleSheet.create({
   //   fontSize: 20,
   //   paddingHorizontal: 15
   // },
+  button:{
+    fontWeight: 'bold',
+    backgroundColor: '#00B0FF',
+    textAlign: 'center',
+    marginBottom:10,
+    fontSize: 15,
+    borderRadius: 50,
+  },
 
   buttonStyle: {
     fontWeight: 'bold',

@@ -11,7 +11,8 @@ import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
 import Modal from "react-native-modal";
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
-// const deviceHeight = (Dimensions.get('window').height)-300;
+ const deviceHeight = (Dimensions.get('window').height);
+ const deviceWidth = (Dimensions.get('window').width);
 export default class Verification extends Component {
     
     state = {
@@ -65,26 +66,27 @@ export default class Verification extends Component {
                     </View>
                     </View>
                 </Modal>
-                <Content>
+                {/* <Content> */}
                 <Container style={Styles.flex1Column}>
                     <View style={{
-                        flex: 2, alignItems: "center",
+                        flex: 2.5, alignItems: "center",backgroundColor:"white",
                         paddingHorizontal: 30,
                         flexDirection: 'column'
                     }}>
                         <Image source={require('../img/verify_id.png')} style={Styles.imageVerifyId} />
-                        <Text style={{ fontSize: 30, paddingVertical: 15, fontWeight: "bold", color: "#616161" }}> We need to verify your ID </Text>
+                        <Text style={{ fontSize: deviceWidth*(7.3/100), paddingVertical: 15, fontWeight: "bold", color: "#616161" }}> 
+                        We need to verify your ID </Text>
 
-                        <Text note style={{ fontSize: 17, lineHeight: 30, textAlign: "center", paddingVertical: 10 }}>
+                        <Text note style={{ fontSize: deviceWidth*(4.13/100),  textAlign: "center", paddingVertical: 10 }}>
                             In order to create an account, we need to be 100% sure that You are You. As we're a
                             financial service. we have to comply with KYC and AML requirements.
                     </Text>
-                        <Text note style={{ fontSize: 17, lineHeight: 30, textAlign: "center", paddingVertical: 10 }}>
+                        <Text note style={{ fontSize: deviceWidth*(4.13/100), textAlign: "center", paddingVertical: 10 }}>
                             You just need to go through some steps which will help up to build a secure system together.
                     </Text>
                     </View>
-                    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 30, flexDirection: "column" }}>
-                        <Button block style={Styles.buttonStyle}
+                    <View style={{ flex: 1, alignItems: "center",backgroundColor:"white", justifyContent: "flex-end", paddingHorizontal: 30, flexDirection: "column", }}>
+                        <Button block style={Styles.button}
                             onPress={() => { this.props.navigation.navigate('VerificationDocument') }}
                         >
                             <Text>Verify</Text>
@@ -92,7 +94,7 @@ export default class Verification extends Component {
                         <TouchableOpacity
                             onPress={() => { this.props.navigation.goBack() }}
                         >
-                            <Text note style={{ fontSize: 17, color: "#23B0FF", lineHeight: 30, textAlign: "center", paddingVertical: 10 }}>
+                            <Text note style={{ fontSize: 17, color: "#23B0FF", lineHeight: 30, textAlign: "center",marginBottom:deviceHeight*(6.25/100) }}>
                                 Don't have ID. Cancel Verification
                     </Text>
                         </TouchableOpacity>
@@ -100,7 +102,7 @@ export default class Verification extends Component {
                     </View>
 
                 </Container>
-                </Content>
+                {/* </Content> */}
             </Container>
         )
     }
