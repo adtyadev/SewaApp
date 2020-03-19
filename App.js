@@ -48,9 +48,9 @@ export default class App extends Component {
 
 
   render() {
-    if (!this.state.isReady) {
-      return <AppLoading />;
-    }
+    // if (!this.state.isReady) {
+    //   return <AppLoading />;
+    // }
 
     if (this.state.isLoading) {
       return <SplashScreen />;

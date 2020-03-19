@@ -49,17 +49,17 @@ export default class Profile extends Component {
               </View>
               <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-around" }}>
                 <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                  <Icon name="star" style={Styles.starSmall} style={{ color: "black" }} />
+                  <Icon name="star" style={Styles.starSmall} style={{ color: "#5d594d" }} />
                   <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
                   <Text > Points </Text>
                 </View>
                 <View style={{ width: 70, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                  <Icon active name="star" />
+                  <Icon active name="star" style={{ color: "#5d594d" }} />
                   <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> 0 </Text>
                   <Text> Points </Text>
                 </View>
                 <View style={{ width: 50, height: 70, alignItems: "center", justifyContent: "center", flexDirection: 'column' }}>
-                  <Icon active name="star" style={Styles.starSmall} style={{ color: "black" }} />
+                  <Icon active name="star" style={Styles.starSmall} style={{ color: "#5d594d" }} />
                   <Text style={{ fontSize: 15, fontWeight: "bold", color: "#00B0FF" }}> Rp 0 </Text>
                   <Text> Points </Text>
                 </View>
@@ -75,7 +75,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('AccountSetting')
               }}
             >
-              <Icon active name="person" />
+              <Icon active name="person" style={{ color: "#5d594d" }} />
               <Text style={Styles.textCardItem}>Account Setting</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -87,7 +87,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('Verification')
               }}
             >
-              <Icon active name="finger-print" />
+              <Icon active name="finger-print" style={{ color: "#5d594d" }}/>
               <Text style={Styles.textCardItem}>Verification</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -99,7 +99,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('Address')
               }}
             >
-              <Icon active name="home" />
+              <Icon active name="home" style={{ color: "#5d594d" }}/>
               <Text style={Styles.textCardItem}>Address</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -111,7 +111,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('Chat')
               }}
             >
-              <Icon active name="chatbubbles" />
+              <Icon active name="chatbubbles" style={{ color: "#5d594d" }}/>
               <Text style={Styles.textCardItem}>Chat</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -123,7 +123,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('Complain')
               }}
             >
-              <Icon active name="call" />
+              <Icon active name="call" style={{ color: "#5d594d" }}/>
               <Text style={Styles.textCardItem}>Complain</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -135,7 +135,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('InputAndSuggestion')
               }}
             >
-              <Icon active name="infinite" />
+              <Icon active name="infinite" style={{ color: "#5d594d" }}/>
               <Text style={Styles.textCardItem}>Input And Suggestion</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -147,7 +147,7 @@ export default class Profile extends Component {
                 this.props.navigation.navigate('ChangeLanguage')
               }}
             >
-              <Icon active name="globe" />
+              <Icon active name="globe" style={{ color: "#5d594d" }} />
               <Text style={Styles.textCardItem}>Change Language</Text>
               <Right >
                 <Icon name="arrow-forward" />
@@ -155,7 +155,7 @@ export default class Profile extends Component {
             </CardItem>
 
             <CardItem bordered button>
-              <Icon active name="undo" />
+              <Icon active name="undo" style={{ color: "#5d594d" }} />
               <Text style={Styles.textCardItem}>Sign Out</Text>
               <Right >
                 <Icon name="arrow-forward" />

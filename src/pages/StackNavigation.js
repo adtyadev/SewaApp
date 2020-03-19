@@ -18,6 +18,7 @@ import ChangeLanguage from './ChangeLanguage';
 import FooterTabNavigation from './FooterTabNavigation';
 import VerificationDocument from './VerificationDocument';
 import VerificationEmail from './VerificationEmail';
+import VerificationEmailCode from './VerificationEmailCode';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 // import getTheme from '../native-base-theme/components';  
@@ -42,6 +43,7 @@ export default class StackNavigation extends Component {
                     <Stack.Screen name="ChangeLanguage" component={ChangeLanguage} />
                     <Stack.Screen name="VerificationDocument" component={VerificationDocument}/>
                     <Stack.Screen name="VerificationEmail" component={VerificationEmail}/>
+                    <Stack.Screen name="VerificationEmailCode" component={VerificationEmailCode}/>
                 </Stack.Navigator>
             </NavigationContainer>
         )

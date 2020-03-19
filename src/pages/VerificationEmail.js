@@ -104,19 +104,19 @@ export default class VerificationEmail extends Component {
                                     </Form>
 
                                     <Button block style={Styles.buttonStyle}
-                                        onPress={() => { this.props.navigation.navigate('VerificationDocument') }}
+                                        onPress={() => { this.props.navigation.navigate('VerificationEmailCode') }}
                                     >
                                         <Text>Send Code OTP</Text>
                                     </Button>
-                                    <TouchableOpacity
+                                    
+                                        <Text note style={{ fontSize: 17, textAlign: "center", paddingVertical: 5 }}>
+                                            Don't recive the code ? </Text> 
+                                            <TouchableOpacity
                                         onPress={() => { this.props.navigation.goBack() }}
                                     >
-                                        <Text note style={{ fontSize: 17, color: "#23B0FF", textAlign: "center", paddingVertical: 5 }}>
-                                            Don't have ID. Cancel Verification
-    </Text>
+                                        <Text note style={{ fontSize: 17, color: "#23B0FF", textAlign: "center", paddingVertical: 0 }}>
+                                        Resend code </Text>
                                     </TouchableOpacity>
-
-
 
                                 </View>
 
