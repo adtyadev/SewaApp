@@ -9,6 +9,7 @@ import { View, Dimensions, TouchableOpacity, StatusBar, Image } from 'react-nati
 import Styles from '../css/Styles';
 import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
 import Modal from "react-native-modal";
+import AddressCard from "../components/AddressCard";
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
  const deviceHeight = (Dimensions.get('window').height);
@@ -42,9 +43,12 @@ export default class Address extends Component {
 
                     </Right>
                 </Header>
+                <AddressCard/>
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                     <Text style={{ fontSize: 30 }}> Address </Text>
+                   
                 </View>
+                
             </Container>
         )
     }
