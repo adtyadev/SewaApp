@@ -44,10 +44,8 @@ export default class Address extends Component {
                     </Right>
                 </Header>
                 <AddressCard/>
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                    <Text style={{ fontSize: 30 }}> Address </Text>
-                   
-                </View>
+                <AddressCard/>
+                <AddressCard/>
                 
             </Container>
         )

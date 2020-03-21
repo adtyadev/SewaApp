@@ -55,6 +55,13 @@ export default StyleSheet.create({
     marginTop: 20,
     marginBottom: 10
   },
+  cardAddressCard: {
+    padding: 10,
+    marginRight: 10,
+    marginLeft: 10,
+    marginTop: 15,
+    marginBottom: 0
+  },
   cardItemSmall: {
     backgroundColor: "white",
     paddingTop: 5,

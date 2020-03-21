@@ -13,7 +13,7 @@ export default class AddressCard extends Component {
     render() {
         return (
             <View>
-                <Card style={Styles.cardListCancelCard}>
+                <Card style={Styles.cardAddressCard}>
 
                     <CardItem style={Styles.cardItemSmall}>
 
@@ -66,33 +66,51 @@ export default class AddressCard extends Component {
                         </Right>
                     </CardItem>
                     <CardItem style={Styles.cardItemMedium}>
-                        <View style={Styles.flex1Column}>
-                            <Button block style={{
-                                backgroundColor: "#00B0FF",
-                                marginTop: 10
+                        <Left>
+                            <Button small style={{
+                                backgroundColor: "#f6f6f6",
                             }}>
-                                <Text style={Styles.fontBold15Black} style={{
-                                    color: "white"
-                                }} >Send Message</Text>
+
+                                <Text style={{
+                                    color: "black",
+                                }} >
+                                    <Ionicons name="md-create" color="gray" size={15} />
+                                  Edit</Text>
                             </Button>
+                            <Button small style={{
+                                backgroundColor: "#00B0FF",
+                                marginLeft: 10
+                            }}>
+
+                                <Text style={{
+                                    color: "white",
+                                }} >
+
+                                    Set Utama </Text>
+                            </Button>
+                        </Left>
+
+                        {/* <View style={Styles.flex1Column}>
+
                         </View>
-                        <Text note> a/n Thomas Budiman</Text>
+                        <Text note> a/n Thomas Budiman</Text> */}
+                        <Body></Body>
                         <Right>
 
-                        <Button block style={{
-                                backgroundColor: "#00B0FF",
-                                marginTop: 10
+                            <Button small style={{
+                                backgroundColor: "#f6f6f6",
                             }}>
-                                <Text style={Styles.fontBold15Black} style={{
-                                    color: "white"
-                                }} >Send Message</Text>
+
+                                <Text style={{
+                                    color: "black",
+                                }} >
+                                    <Ionicons name="md-trash" color="gray" size={15} />
+                                  Hapus</Text>
                             </Button>
                             {/* <Ionicons name="ios-pin" color={"black"} size={20}/> */}
                             {/* <Text style={Styles.fontBold15Blue}>Rp 39.600,- </Text> */}
                         </Right>
                     </CardItem>
-
-
                 </Card>
             </View>
 

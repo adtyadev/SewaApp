@@ -8,6 +8,7 @@ import {
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
+import Login from './Login';
 import AccountSetting from './AccountSetting';
 import Verification from './Verification';
 import Address from './Address';
@@ -33,6 +34,7 @@ export default class StackNavigation extends Component {
                     headerShown: false,
                     animationEnabled: false
                 }}>
+                    <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="FooterTabNavigation" component={FooterTabNavigation} />
                     <Stack.Screen name="AccountSetting" component={AccountSetting} />
                     <Stack.Screen name="Verification" component={Verification} />
