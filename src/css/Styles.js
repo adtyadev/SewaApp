@@ -152,6 +152,13 @@ export default StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
 },
+lineCenterBlack:{
+  borderBottomColor: 'black',
+  height:2,
+  backgroundColor: "black",
+  marginLeft: 5,
+  marginRight: 5,
+},
   headerAccordionSmall: {
     backgroundColor: "#b7daf8",
     backgroundColor: "white",
