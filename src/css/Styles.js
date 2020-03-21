@@ -245,7 +245,16 @@ export default StyleSheet.create({
     fontSize: 15,
     borderRadius: 50,
   },
-
+  buttonSquare:{
+    fontWeight: 'bold',
+    backgroundColor: '#00B0FF',
+    textAlign: 'center',
+    marginBottom:10,
+    borderRadius: 10,
+    fontSize: 15,
+    paddingVertical:15,
+    paddingHorizontal:25
+  },
   buttonStyle: {
     fontWeight: 'bold',
     backgroundColor: '#00B0FF',
