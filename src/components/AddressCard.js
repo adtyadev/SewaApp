@@ -11,7 +11,36 @@ const dataArray = [
 export default class AddressCard extends Component {
     constructor(props) {
         super(props)
+
+        this.state={
+            mainAddress:""
+        }
     }
+
+    componentDidMount(){
+        if (this.props.id == 122) this.setState( { mainAddress:"Alamat Utama" })
+    }
+
+    setUtama(){
+        if(this.props.id == 122){
+            return(
+                <Button small style={{
+                    backgroundColor: "#00B0FF",
+                    marginLeft: 10
+                }}>
+    
+                    <Text style={{
+                        color: "white",
+                    }} >
+    
+                        Set Utama </Text>
+                </Button>
+            )
+        }
+        
+    }
+
+
     render() {
         return (
             <View>
@@ -22,7 +51,7 @@ export default class AddressCard extends Component {
                         <Text style={{
                             fontSize: 15,
                             color: "gray",
-                        }}> Alamat Utama </Text>
+                        }}> {this.state.mainAddress} </Text>
 
                     </CardItem>
 
@@ -79,17 +108,8 @@ export default class AddressCard extends Component {
                                     <Ionicons name="md-create" color="gray" size={15} />
                                   Edit</Text>
                             </Button>
-                            <Button small style={{
-                                backgroundColor: "#00B0FF",
-                                marginLeft: 10
-                            }}>
 
-                                <Text style={{
-                                    color: "white",
-                                }} >
-
-                                    Set Utama </Text>
-                            </Button>
+                            {this.setUtama()}
                         </Left>
 
                         {/* <View style={Styles.flex1Column}>

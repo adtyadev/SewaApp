@@ -48,7 +48,7 @@ export default class Address extends Component {
             </View>)
         }else{
            let Address = this.state.dataSource[0].map((val,key)=>{
-            return  <AddressCard key={key} name={val.NAMA}/>
+            return  <AddressCard key={key} name={val.NAMA} id={val.ID}/>
            })
 
            return (
