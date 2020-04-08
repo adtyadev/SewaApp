@@ -1,68 +1,137 @@
 import React, { Component } from 'react';
 import {
-    Container, Button, Icon,
-    Text, Footer, FooterTab,
+    Container, Button, Icon, Body, Label,
+    Text, Footer, FooterTab, Item,
     Tab, Tabs, ScrollableTab,
-    StyleProvider, List
+    StyleProvider, List, Input, Right, Left
 } from 'native-base';
-import { View, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Dimensions, TouchableOpacity, Constants, StatusBar, TextInput } from 'react-native';
 import Styles from '../css/Styles';
 import AddressCard from "../components/AddressCard";
 import { ActivityIndicator } from 'react-native-paper';
-
+const deviceHeight = (Dimensions.get('window').height);
+const deviceWidth = (Dimensions.get('window').width);
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
-
+import { MaterialCommunityIcons, Ionicons } from 'react-native-vector-icons';
 export default class Home extends Component {
 
     constructor(props) {
         super(props)
 
         this.state = {
-            isLoading: true,
+            isLoading: false,
             dataSource: null
         }
     }
 
-    componentDidMount() {
-        return fetch('https://spmb.uns.ac.id/services/index.php/v1/jalur-masuk/jalur-aktif')
-            .then((response) => response.json())
-            .then((json) => {
-                this.setState({
-                    isLoading:false,
-                    dataSource:json.data,
-                })
-                return json.movies;
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    }
+    // componentDidMount() {
+    //     return fetch('https://spmb.uns.ac.id/services/index.php/v1/jalur-masuk/jalur-aktif')
+    //         .then((response) => response.json())
+    //         .then((json) => {
+    //             this.setState({
+    //                 isLoading:false,
+    //                 dataSource:json.data,
+    //             })
+    //             return json.movies;
+    //         })
+    //         .catch((error) => {
+    //             console.error(error);
+    //         });
+    // }
 
     render() {
 
-        if(this.state.isLoading){
+        if (this.state.isLoading) {
             return (<View style={Styles.container}>
-                <ActivityIndicator/>
+                <ActivityIndicator />
             </View>)
-        }else{
-           let movies = this.state.dataSource[0].map((val,key)=>{
-            return  <View key={key} style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-             <AddressCard name={val.name}/>
-        </View>
+        } else {
+            return (
+                <Container style={{}}>
+                    {/* <Content> digunakan untuk scrollview pada page */}
+                    <View style={{
+                        flex: 1, alignItems: "center", justifyContent: "flex-start",
+                        marginTop: StatusBar.currentHeight+5, marginHorizontal: deviceWidth * 1 / 25,
+                        backgroundColor: "red"
+                    }}>
+                        <View style={{ flex: 0.2, backgroundColor: "white", alignItems: "center", flexDirection: "row", justifyContent: "center", width: "100%" }} >
+                            <View style={{
+                                flex: 1, flexDirection: 'row',
+                                justifyContent: 'center', alignItems: 'center',
+                                backgroundColor: '#f7f7f7',
+                                borderRadius: 10
+                            }}>
+                            <View style={{
+                                flex: 7, flexDirection: 'row',
+                                justifyContent: 'center', alignItems: 'center',
+                                backgroundColor: '#f7f7f7', borderRadius: 10
+                            }}>
+                            <Ionicons name="ios-search" color={"gray"} size={20} style={Styles.searchIcon} />
+                                <TextInput
+                                    style={{
+                                        flex: 1,paddingTop: 8,
+                                        paddingRight: 10, paddingBottom: 8,
+                                        paddingLeft: 0, backgroundColor: '#f7f7f7',
+                                        color: '#d9d9da',
+                                    }}
+                                    placeholder="User Nickname"
+                                    onChangeText={(searchString) => { this.setState({ searchString }) }}
+                                    underlineColorAndroid="transparent"
+                                />
 
-           })
+                            </View>
 
-           return (
-            <Container style={{}}>
-                {/* <Content> digunakan untuk scrollview pada page */}
-               {movies}
-            </Container>
-    
-    )
-    }
+                            <View style={{
+                                flex: 1, flexDirection: 'row',
+                                justifyContent: 'center', alignItems: 'center',
+                                backgroundColor: 'white',borderRadius: 10
+                            }}>
+                                {/* <Ionicons name="ios-mail" color={"#00B0FF"} size={30} style={Styles.searchIcon} /> */}
+                            </View>
+                                
+                            </View>
+                            {/* <TextInput 
+                placeholder={"Search for photos"}
+                style={{
+                    backgroundColor:"white",
+                    borderRadius:5,width:"100%",height:"60%",
+                    fontSize:15,paddingHorizontal:5,
+                }}
+            >
 
-    
+               <Ionicons name="ios-mail" color={"#00B0FF"} size={30} style={{
+                   backgroundColor:"white"
+               }} />
+               
+               <Text  style={{
+                    fontSize:15,marginLeft:20,
+                }}>Search for photos</Text>
+            </TextInput> */}
+
+
+
+
+                        </View>
+                        <View style={{ flex: 1.5, backgroundColor: "yellow", alignItems: "center", flexDirection: "row", justifyContent: "center", width: "100%" }} >
+
+                            <Text style={{ fontSize: 30, }}> . . . . . .</Text>
+                            <Text style={{ fontSize: 30, }}> . . . . . .</Text>
+                            <Text style={{ fontSize: 30, }}> . . . . . .</Text>
+                        </View>
+
+                        <Text style={{ fontSize: 30 }}> . . . . . </Text>
+                        <Text style={{ fontSize: 30 }}> . . . . . </Text>
+                        <Text style={{ fontSize: 30 }}> . . . . . </Text>
+                        <Text style={{ fontSize: 30 }}> . . . . . </Text>
+                        <Text style={{ fontSize: 30 }}> . . . . . </Text>
+
+                    </View>
+                </Container>
+            )
+        }
+
+
 
     }
 }
