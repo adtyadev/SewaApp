@@ -7,54 +7,62 @@ import {
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity } from 'react-native';
 import Styles from '../css/Styles';
+import AddressCard from "../components/AddressCard";
+import { ActivityIndicator } from 'react-native-paper';
 
 // import getTheme from '../native-base-theme/components';  
 // import styleTheme from '../native-base-theme/variables/platform.js';
 
 export default class Home extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isLoading: true,
+            dataSource: null
+        }
+    }
+
+    componentDidMount() {
+        return fetch('https://spmb.uns.ac.id/services/index.php/v1/jalur-masuk/jalur-aktif')
+            .then((response) => response.json())
+            .then((json) => {
+                this.setState({
+                    isLoading:false,
+                    dataSource:json.data,
+                })
+                return json.movies;
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+
     render() {
-        return (
+
+        if(this.state.isLoading){
+            return (<View style={Styles.container}>
+                <ActivityIndicator/>
+            </View>)
+        }else{
+           let movies = this.state.dataSource[0].map((val,key)=>{
+            return  <View key={key} style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+             <AddressCard name={val.name}/>
+        </View>
+
+           })
+
+           return (
             <Container style={{}}>
                 {/* <Content> digunakan untuk scrollview pada page */}
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                    <Text style={{ fontSize: 30 }}> Home Page </Text>
-                </View>
-                {/* <Footer>
-                    <FooterTab style={{ backgroundColor: "white" }}>
-                        <Button vertical active>
-                            <Icon active name="home" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Home</Text>
-                        </Button>
-                        <Button vertical
-                            onPress={() => this.props.navigation.navigate('Profile')}
-                        >
-                            <Icon name="person" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Profile</Text>
-                        </Button>
-                        <Button vertical
-                            onPress={() => this.props.navigation.navigate('Inbox')}
-                        >
-                            <Icon active name="mail" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Inbox</Text>
-                        </Button>
-                        <Button vertical
-                            onPress={() => this.props.navigation.navigate('Transaction')}
-                        >
-                            <Icon name="document" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Transaction</Text>
-                        </Button>
-                        <Button vertical
-                        onPress={() => this.props.navigation.navigate('Chart')}
-                        >
-                            <Icon name="cart" style={Styles.iconFooter} />
-                            <Text style={Styles.font7Gray}>Cart</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer> */}
-
+               {movies}
             </Container>
+    
+    )
+    }
 
-        )
+    
+
     }
 }
