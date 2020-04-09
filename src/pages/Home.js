@@ -53,7 +53,7 @@ export default class Home extends Component {
                     {/* <Content> digunakan untuk scrollview pada page */}
                     <View style={{
                         flex: 1, alignItems: "center", justifyContent: "flex-start",
-                        marginTop: StatusBar.currentHeight+5, marginHorizontal: deviceWidth * 1 / 25,
+                        marginTop: StatusBar.currentHeight + 5, marginHorizontal: deviceWidth * 1 / 25,
                         backgroundColor: "white"
                     }}>
                         <View style={{ flex: 0.2, backgroundColor: "white", alignItems: "center", flexDirection: "row", justifyContent: "center", width: "100%" }} >
@@ -63,45 +63,51 @@ export default class Home extends Component {
                                 backgroundColor: '#f7f7f7',
                                 borderRadius: 10
                             }}>
-                            <View style={{
-                                flex: 7, flexDirection: 'row',
-                                justifyContent: 'center', alignItems: 'center',
-                                backgroundColor: '#f7f7f7', borderRadius: 10
-                            }}>
-                            <Ionicons name="ios-search" color={"gray"} size={20} style={Styles.searchIcon} />
-                                <TextInput
-                                    style={{
-                                        flex: 1,paddingTop: 8,
-                                        paddingRight: 10, paddingBottom: 8,
-                                        paddingLeft: 0, backgroundColor: '#f7f7f7',
-                                        color: '#d9d9da',
-                                    }}
-                                    placeholder="User Nickname"
-                                    onChangeText={(searchString) => { this.setState({ searchString }) }}
-                                    underlineColorAndroid="transparent"
-                                />
+                                <View style={{
+                                    flex: 7, flexDirection: 'row',
+                                    justifyContent: 'center', alignItems: 'center',
+                                    backgroundColor: '#f7f7f7', borderRadius: 10
+                                }}>
+                                    <Ionicons name="ios-search" color={"gray"} size={20} style={Styles.searchIcon} />
+                                    <TextInput
+                                        style={{
+                                            flex: 1, paddingTop: 8,
+                                            paddingRight: 10, paddingBottom: 8,
+                                            paddingLeft: 0, backgroundColor: '#f7f7f7',
+                                            color: '#d9d9da',
+                                        }}
+                                        placeholder="User Nickname"
+                                        onChangeText={(searchString) => { this.setState({ searchString }) }}
+                                        underlineColorAndroid="transparent"
+                                    />
 
-                            </View>
+                                </View>
 
-                            <View style={{
-                                flex: 1, flexDirection: 'row',
-                                justifyContent: 'center', alignItems: 'center',
-                                backgroundColor: 'white',borderRadius: 10
-                            }}>
-                                {/* <Ionicons name="ios-mail" color={"#00B0FF"} size={30} style={Styles.searchIcon} /> */}
-                            </View>
-                                
+                                <View style={{
+                                    flex: 1, flexDirection: 'row',
+                                    justifyContent: 'center', alignItems: 'center',
+                                    backgroundColor: 'white', borderRadius: 10
+                                }}>
+                                    {/* <Ionicons name="ios-mail" color={"#00B0FF"} size={30} style={Styles.searchIcon} /> */}
+                                </View>
+
                             </View>
                         </View>
                         <Text note style={{
-                            fontSize:18,
+                            fontSize: 18,
                         }}>Deliver to Shamim Sharani, Chaka </Text>
-                        <View style={{ flex: 1.5, backgroundColor: "yellow", alignItems: "center", flexDirection: "row", justifyContent: "center", width: "100%" }} >
-                        <ImageSlider images={[
-    'http://placeimg.com/640/480/any',
-    'http://placeimg.com/640/480/any',
-    'http://placeimg.com/640/480/any'
-  ]}/>
+                        <ImageSlider 
+                        style={{
+                            marginTop:10,
+                            borderRadius:20
+                        }}
+                        images={[
+                            'http://placeimg.com/640/480/any',
+                            'http://placeimg.com/640/480/any',
+                            'http://placeimg.com/640/480/any'
+                        ]} />
+                        <View style={{ flex: 1.5, backgroundColor: "yellow", alignItems: "center", borderRadius:20, flexDirection: "row", justifyContent: "center", width: "100%" }} >
+
                             <Text style={{ fontSize: 30, }}> . . . . . .</Text>
                             <Text style={{ fontSize: 30, }}> . . . . . .</Text>
                             <Text style={{ fontSize: 30, }}> . . . . . .</Text>
