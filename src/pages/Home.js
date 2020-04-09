@@ -7,6 +7,7 @@ import {
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity, Constants, StatusBar, TextInput } from 'react-native';
 import Styles from '../css/Styles';
+import ImageSlider from 'react-native-image-slider';
 import AddressCard from "../components/AddressCard";
 import { ActivityIndicator } from 'react-native-paper';
 const deviceHeight = (Dimensions.get('window').height);
@@ -53,7 +54,7 @@ export default class Home extends Component {
                     <View style={{
                         flex: 1, alignItems: "center", justifyContent: "flex-start",
                         marginTop: StatusBar.currentHeight+5, marginHorizontal: deviceWidth * 1 / 25,
-                        backgroundColor: "red"
+                        backgroundColor: "white"
                     }}>
                         <View style={{ flex: 0.2, backgroundColor: "white", alignItems: "center", flexDirection: "row", justifyContent: "center", width: "100%" }} >
                             <View style={{
@@ -91,30 +92,16 @@ export default class Home extends Component {
                             </View>
                                 
                             </View>
-                            {/* <TextInput 
-                placeholder={"Search for photos"}
-                style={{
-                    backgroundColor:"white",
-                    borderRadius:5,width:"100%",height:"60%",
-                    fontSize:15,paddingHorizontal:5,
-                }}
-            >
-
-               <Ionicons name="ios-mail" color={"#00B0FF"} size={30} style={{
-                   backgroundColor:"white"
-               }} />
-               
-               <Text  style={{
-                    fontSize:15,marginLeft:20,
-                }}>Search for photos</Text>
-            </TextInput> */}
-
-
-
-
                         </View>
+                        <Text note style={{
+                            fontSize:18,
+                        }}>Deliver to Shamim Sharani, Chaka </Text>
                         <View style={{ flex: 1.5, backgroundColor: "yellow", alignItems: "center", flexDirection: "row", justifyContent: "center", width: "100%" }} >
-
+                        <ImageSlider images={[
+    'http://placeimg.com/640/480/any',
+    'http://placeimg.com/640/480/any',
+    'http://placeimg.com/640/480/any'
+  ]}/>
                             <Text style={{ fontSize: 30, }}> . . . . . .</Text>
                             <Text style={{ fontSize: 30, }}> . . . . . .</Text>
                             <Text style={{ fontSize: 30, }}> . . . . . .</Text>

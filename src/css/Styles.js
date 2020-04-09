@@ -25,6 +25,12 @@ export default StyleSheet.create({
 searchIcon: {
     padding: 10,
 },
+carouselContainer: {
+  height:200  
+},
+  carousel: {
+        flex:1
+} ,
 input: {
     flex: 1,
     paddingTop: 10,

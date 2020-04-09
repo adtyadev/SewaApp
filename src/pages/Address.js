@@ -3,7 +3,7 @@ import {
     Container,Content,
     Text, Header, Button, Left, Title, Icon, Body,
     Tab, Tabs, ScrollableTab, Right,
-    StyleProvider, List
+    StyleProvider, List,Spinner 
 } from 'native-base';
 import { View, Dimensions, TouchableOpacity, StatusBar, Image } from 'react-native';
 import Styles from '../css/Styles';
@@ -44,7 +44,7 @@ export default class Address extends Component {
 
         if(this.state.isLoading){
             return (<View style={Styles.container}>
-                <ActivityIndicator/>
+                <Spinner color='blue'/>
             </View>)
         }else{
            let Address = this.state.dataSource[0].map((val,key)=>{
